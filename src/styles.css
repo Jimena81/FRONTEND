@@ -8,6 +8,8 @@
     --amarillo-corporativo:#e8b610;
     --gris-corporativo:#b1b34;
     --griscorporativo-oscuro:#999999;
+    --color-rojo-activo:crimson;
+    --color-verde-activo:forestgreen;
 
 }
 /*=============================================*/
@@ -50,3 +52,23 @@ h3{
 a{
   text-decoration:none;
 }
+
+.activo-rojo{
+  font-size: 2rem;
+  color:var(--color-rojo-activo);
+  text-align:center;
+
+}
+.activo-verde{
+  font-size: 2rem;
+  color:var(--color-verde-activo);
+  text-align:center;
+
+}
+.activo{
+  text-align:center;
+}
+td{
+  vertical-align:middle;
+}
+

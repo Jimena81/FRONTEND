@@ -28,7 +28,7 @@ constructor(
       this._tipoService.getTipos().subscribe({
 //este metodo es un callback de subscribe
 //es una subscripcion de los datos
-        next:(datos)=>{console.log(datos)},
+        next:(datos)=>{this.Datos=datos},
         error:(error)=>{},
         complete:()=>{}
       });

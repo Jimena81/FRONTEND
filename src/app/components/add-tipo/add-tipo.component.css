@@ -5,6 +5,14 @@
 .contenedor{
   padding:15px;
 }
+.contenedor-boton{
+  display:flex;
+  justify-content: right;
+}
+form{
+  max-width:25rem;
+
+}
 
 /* ================================================= */
 /* MEDIA QUERIES */

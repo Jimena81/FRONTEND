@@ -5,6 +5,22 @@
 .contenedor{
   padding:15px;
 }
+.contenedor-boton{
+  display:flex;
+  justify-content: right;
+}
+form{
+  max-width:25rem;
+
+}
+.label-check{
+  margin-right:10px;
+}
+.id-tipo{
+  font-size:1rem;
+  padding:5px;
+  
+}
 
 /* ================================================= */
 /* MEDIA QUERIES */

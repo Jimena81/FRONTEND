@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ErrorComponent } from './components/error/error.component';
 import { ListHomeComponent } from './components/list-home/list-home.component';
 import { ListTipoComponent } from './components/list-tipo/list-tipo.component';
+import { AddTipoComponent } from './components/add-tipo/add-tipo.component';
+import { EditTipoComponent } from './components/edit-tipo/edit-tipo.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +32,16 @@ import { ListTipoComponent } from './components/list-tipo/list-tipo.component';
     HomeComponent,
     ErrorComponent,
     ListHomeComponent,
-    ListTipoComponent
+    ListTipoComponent,
+    AddTipoComponent,
+    EditTipoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

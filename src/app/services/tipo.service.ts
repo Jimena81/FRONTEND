@@ -19,5 +19,20 @@ export class TipoService {
    return this._http.get<Tipo[]>(this.url + "tipos");
   }
 
+  addTipo(tipo:Tipo):Observable<Tipo>{
+
+  return this._http.post<Tipo>(this.url + "tipo",tipo);
+}
+
+  getTipo(id:number):Observable<Tipo>{
+
+    return this._http.get<Tipo>(this.url + "tipo/" + id);
+  }
+
+  updateTipo(tipo:Tipo):Observable<Tipo>{
+
+    return this._http.put<Tipo>(this.url + "tipo",tipo);
+
+  }
 
 }
