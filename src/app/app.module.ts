@@ -18,6 +18,9 @@ import { ListHomeComponent } from './components/list-home/list-home.component';
 import { ListTipoComponent } from './components/list-tipo/list-tipo.component';
 import { AddTipoComponent } from './components/add-tipo/add-tipo.component';
 import { EditTipoComponent } from './components/edit-tipo/edit-tipo.component';
+import { ListProvinciaComponent } from './components/list-provincia/list-provincia.component';
+import { AddProvinciaComponent } from './components/add-provincia/add-provincia.component';
+import { EditProvinciaComponent } from './components/edit-provincia/edit-provincia.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { EditTipoComponent } from './components/edit-tipo/edit-tipo.component';
     ListHomeComponent,
     ListTipoComponent,
     AddTipoComponent,
-    EditTipoComponent
+    EditTipoComponent,
+    ListProvinciaComponent,
+    AddProvinciaComponent,
+    EditProvinciaComponent
   ],
   imports: [
     BrowserModule,
