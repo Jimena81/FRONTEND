@@ -21,6 +21,11 @@ import { EditTipoComponent } from './components/edit-tipo/edit-tipo.component';
 import { ListProvinciaComponent } from './components/list-provincia/list-provincia.component';
 import { AddProvinciaComponent } from './components/add-provincia/add-provincia.component';
 import { EditProvinciaComponent } from './components/edit-provincia/edit-provincia.component';
+import { ListPoblacionComponent } from './components/list-poblacion/list-poblacion.component';
+import { AddPoblacionComponent } from './components/add-poblacion/add-poblacion.component';
+import { EditPoblacionComponent } from './components/edit-poblacion/edit-poblacion.component';
+import { ListInmuebleComponent } from './components/list-inmueble/list-inmueble.component';
+import { PreloaderComponent } from './components/preloader/preloader.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +45,12 @@ import { EditProvinciaComponent } from './components/edit-provincia/edit-provinc
     EditTipoComponent,
     ListProvinciaComponent,
     AddProvinciaComponent,
-    EditProvinciaComponent
+    EditProvinciaComponent,
+    ListPoblacionComponent,
+    AddPoblacionComponent,
+    EditPoblacionComponent,
+    ListInmuebleComponent,
+    PreloaderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProvinciaService } from '../../services/provincia.service';
 import { Router } from '@angular/router';
 import { Provincia } from '../../models/entity';
@@ -8,11 +8,16 @@ import { Provincia } from '../../models/entity';
   templateUrl: './add-provincia.component.html',
   styleUrl: './add-provincia.component.css'
 })
-export class AddProvinciaComponent {
+export class AddProvinciaComponent implements OnInit{
   constructor(
     private _provinciaService: ProvinciaService,
     private _router:Router
     ){}
+
+
+    ngOnInit(): void {
+    
+  }
 
 
 

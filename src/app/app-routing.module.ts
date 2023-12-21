@@ -8,6 +8,9 @@ import { EditTipoComponent } from './components/edit-tipo/edit-tipo.component';
 import { ListProvinciaComponent } from './components/list-provincia/list-provincia.component';
 import { AddProvinciaComponent } from './components/add-provincia/add-provincia.component';
 import { EditProvinciaComponent } from './components/edit-provincia/edit-provincia.component';
+import { ListPoblacionComponent } from './components/list-poblacion/list-poblacion.component';
+import { AddPoblacionComponent } from './components/add-poblacion/add-poblacion.component';
+import { EditPoblacionComponent } from './components/edit-poblacion/edit-poblacion.component';
 
 const routes: Routes = [
 
@@ -15,11 +18,13 @@ const routes: Routes = [
 {path:"home",component:HomeComponent},
 {path:"list-tipo",component:ListTipoComponent},
 {path:"list-provincia",component:ListProvinciaComponent},
+{path:"list-poblacion",component:ListPoblacionComponent},
 {path:"add-tipo",component:AddTipoComponent},
 {path:"add-provincia",component:AddProvinciaComponent},
+{path:"add-poblacion",component:AddPoblacionComponent},
 {path:"edit-tipo/:id",component:EditTipoComponent},
 {path:"edit-provincia/:id",component:EditProvinciaComponent},
-
+{path:"edit-poblacion/:id",component:EditPoblacionComponent},
 
 
 

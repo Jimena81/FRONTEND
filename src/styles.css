@@ -68,7 +68,10 @@ a{
 .activo{
   text-align:center;
 }
-td, th{
+td,th{
   vertical-align:middle;
 }
 
+.select-inactivo{
+  color:red;
+}

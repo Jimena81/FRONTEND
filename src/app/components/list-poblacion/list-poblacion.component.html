@@ -1,0 +1,45 @@
+<div class="contenedor">
+
+  <h1>Listado de poblaciones</h1>
+
+  <div>
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">POBLACIÓN</th>
+              <th scope="col">PROVINCIA</th>
+              <th class="activo" scope="col">ACTIVO</th>
+              <th scope="col">EDITAR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let dato of Datos">
+                <th scope="row">{{dato.id}}</th>
+                <td>{{dato.nombre}}</td>
+                <td>{{dato.provincia.nombre}}</td>
+                <td [ngClass]="{
+                  'activo-rojo':dato.activo == 0,
+                  'activo-verde':dato.activo == 1
+                }">●</td>
+                <button type="button" class="btn btn-success btn-sm" [routerLink]="['/edit-poblacion',dato.id]"
+                >EDITAR</button>
+
+
+
+            </tr>
+
+
+          </tbody>
+
+
+
+      </table>
+
+
+
+
+
+
+
+  </div>
