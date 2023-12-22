@@ -1,7 +1,8 @@
 <div class="contenedor">
   <h1>Editar Provincia</h1>
-
-  <form class="mx-auto" #form="ngForm" (ngSubmit)="edit()">
+  <app-preloader *ngIf="!cargaCompletada"/>
+  
+  <form *ngIf="cargaCompletada" class="mx-auto" #form="ngForm" (ngSubmit)="edit()">
 
     <p class="id-provincia">ID: {{provincia.id}}</p>
     <div class="mb-3">

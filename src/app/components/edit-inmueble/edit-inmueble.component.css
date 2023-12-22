@@ -1,16 +1,26 @@
 /* ================================================= */
 /* FIRST MOBILE */
 /* ================================================= */
+
 .contenedor{
-  padding-bottom:2rem;
-  padding-top:1.3rem;
-  border-top:1px solid white;
+  padding:15px;
+}
+.contenedor-boton{
   display:flex;
-  flex-direction: column;
-  align-items:center;
+  justify-content: right;
+}
+form{
+  max-width:25rem;
 
 }
+.label-check{
+  margin-right:10px;
+}
+.id-inmueble{
+  font-size:1rem;
+  padding:5px;
 
+}
 
 /* ================================================= */
 /* MEDIA QUERIES */
@@ -39,12 +49,7 @@
 /* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
 @media only screen and (min-width:992px){
 
-.contenedor{
 
-  flex-direction: row;
-  justify-content:evenly;
-
-}
 
 
 }

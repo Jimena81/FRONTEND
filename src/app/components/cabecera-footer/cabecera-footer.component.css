@@ -8,7 +8,7 @@
 .contenedor-logo{
   display: flex;
   flex-direction: row;
-  aling-items: center;
+  align-items: center;
   justify-content: center;
   padding: 1.5rem 0;
 
@@ -66,7 +66,7 @@
   filter:invert(1);
 }
 .texto-logo{
-  font-weigth: bold;
+  font-weight: bold;
   font-size:1.2rem;
   padding-left:0.5rem;
 }
@@ -119,7 +119,7 @@
   }
   .contenedor-aplicaciones a{
     display:flex;
-    aling-items:center;
+    align-items:center;
   }
 }
 

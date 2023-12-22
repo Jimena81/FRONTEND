@@ -9,6 +9,13 @@ import { Provincia } from '../../models/entity';
   styleUrl: './edit-provincia.component.css'
 })
 export class EditProvinciaComponent implements OnInit{
+
+   /////////////para el preloader//////////////////////
+   nFases:number=1;
+   cargaCompletada:boolean=false;
+   fasesCargadas:number=0;
+   ////////////////////////////////////////
+
   id:number;
 
   constructor(
@@ -51,7 +58,7 @@ export class EditProvinciaComponent implements OnInit{
           this.provincia.activo= datos.activo//ASIGNA EL 1 TRUE Y 0 FALSE
           },
           error:(error)=>{this._router.navigate(["/error"])},
-          complete:()=>{}
+          complete:()=>{this.faseCarga()}
 
       })
 
@@ -71,4 +78,14 @@ export class EditProvinciaComponent implements OnInit{
 
 
 }
+////////////////para el preloader//////////////
+faseCarga():void{
+
+  this.fasesCargadas++;
+  if(this.fasesCargadas== this.nFases){
+    this.cargaCompletada = true;
+  }
+
+}
+///////////////////////////////////////////////
 }

@@ -1,1 +1,59 @@
-<p>list-inmueble works!</p>
+<div class="contenedor">
+
+  <h1>Listado de poblaciones</h1>
+
+  <div>
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">TIPO</th>
+              <th scope="col">TITULAR</th>
+              <th scope="col">DIRECCIÓN</th>
+              <th scope="col">SUPERFICIE ÚTIL</th>
+              <th scope="col">PRECIO</th>
+              <th scope="col">DESCRIPCION</th>
+
+
+              <th class="activo" scope="col">ACTIVO</th>
+              <th scope="col">EDITAR</th>
+              <th scope="col">IMAGEN</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let dato of Datos">
+                <th scope="row">{{dato.id}}</th>
+                <td>{{dato.tipo.nombre}}</td>
+                <td>{{dato.titular}}</td>
+                <td>{{dato.direccionCompleta}}</td>
+                <td>{{dato.superficieUtil}}</td>
+                <td>{{dato.precio}}</td>
+                <td>{{dato.descripcion}}</td>
+                <td [ngClass]="{
+                  'activo-rojo':dato.activo == 0,
+                  'activo-verde':dato.activo == 1
+                }">●</td>
+                <button type="button" class="btn btn-success btn-sm" [routerLink]="['/edit-inmueble',dato.id]"
+                >EDITAR</button>
+                <button type="button" class="btn btn-success btn-sm" [routerLink]="['/edit-poblacion',dato.id]"
+                >+IMAGEN</button>
+
+
+
+            </tr>
+
+
+          </tbody>
+
+
+
+      </table>
+
+
+
+
+
+
+
+  </div>
+

@@ -26,6 +26,8 @@ import { AddPoblacionComponent } from './components/add-poblacion/add-poblacion.
 import { EditPoblacionComponent } from './components/edit-poblacion/edit-poblacion.component';
 import { ListInmuebleComponent } from './components/list-inmueble/list-inmueble.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
+import { AddInmuebleComponent } from './components/add-inmueble/add-inmueble.component';
+import { EditInmuebleComponent } from './components/edit-inmueble/edit-inmueble.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { PreloaderComponent } from './components/preloader/preloader.component';
     AddPoblacionComponent,
     EditPoblacionComponent,
     ListInmuebleComponent,
-    PreloaderComponent
+    PreloaderComponent,
+    AddInmuebleComponent,
+    EditInmuebleComponent
   ],
   imports: [
     BrowserModule,

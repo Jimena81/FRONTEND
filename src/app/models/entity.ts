@@ -49,7 +49,7 @@ export interface Inmueble{
   via:string;
   poblacion:Poblacion;
   tipo:Tipo;
- // direccionCompleta?:string;
+  direccionCompleta?:string;
 
 
 }
