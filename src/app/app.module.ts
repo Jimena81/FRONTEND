@@ -27,7 +27,7 @@ import { EditPoblacionComponent } from './components/edit-poblacion/edit-poblaci
 import { ListInmuebleComponent } from './components/list-inmueble/list-inmueble.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
 import { AddInmuebleComponent } from './components/add-inmueble/add-inmueble.component';
-import { EditInmuebleComponent } from './components/edit-inmueble/edit-inmueble.component';
+
 
 @NgModule({
   declarations: [
@@ -54,13 +54,13 @@ import { EditInmuebleComponent } from './components/edit-inmueble/edit-inmueble.
     ListInmuebleComponent,
     PreloaderComponent,
     AddInmuebleComponent,
-    EditInmuebleComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
 
   ],
   providers: [],

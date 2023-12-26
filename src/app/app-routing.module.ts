@@ -13,7 +13,7 @@ import { AddPoblacionComponent } from './components/add-poblacion/add-poblacion.
 import { EditPoblacionComponent } from './components/edit-poblacion/edit-poblacion.component';
 import { ListInmuebleComponent } from './components/list-inmueble/list-inmueble.component';
 import { AddInmuebleComponent } from './components/add-inmueble/add-inmueble.component';
-import { EditInmuebleComponent } from './components/edit-inmueble/edit-inmueble.component';
+
 
 const routes: Routes = [
 
@@ -30,7 +30,7 @@ const routes: Routes = [
 {path:"edit-tipo/:id",component:EditTipoComponent},
 {path:"edit-provincia/:id",component:EditProvinciaComponent},
 {path:"edit-poblacion/:id",component:EditPoblacionComponent},
-{path:"edit-inmueble/:id",component:EditInmuebleComponent},
+
 
 
 

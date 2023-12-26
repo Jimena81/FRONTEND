@@ -5,6 +5,7 @@ import { InmuebleService } from '../../services/inmueble.service';
 import { PoblacionService } from '../../services/poblacion.service';
 import { TipoService } from '../../services/tipo.service';
 
+
 @Component({
   selector: 'app-add-inmueble',
   templateUrl: './add-inmueble.component.html',
@@ -12,11 +13,7 @@ import { TipoService } from '../../services/tipo.service';
 })
 export class AddInmuebleComponent implements OnInit {
 
-/////////////////////////////////////////////////
-nFases:number=2;
-cargaCompletada:boolean=false;
-fasesCargadas:number=0;
-/////////////////////////////////////////////////
+
 
 
   Poblaciones:Poblacion[];
@@ -89,11 +86,11 @@ fasesCargadas:number=0;
     //Rellenar el select población con los datos de la BBDD
     this._poblacionService.getPoblaciones().subscribe({
 
-      next: (datos)=>{this.Poblaciones = datos}
+      next: (datos)=>{this.Poblaciones = datos;}
       ,
       error: (error)=>{this._router.navigate(['/error'])}
       ,
-      complete: ()=>{this.faseCarga();}
+      complete: ()=>{}
 
     });
 
@@ -105,7 +102,7 @@ fasesCargadas:number=0;
       ,
       error: (error)=>{this._router.navigate(['/error'])}
       ,
-      complete: ()=>{this.faseCarga();}
+      complete: ()=>{}
 
     });
 
@@ -141,15 +138,6 @@ fasesCargadas:number=0;
   }
 
 
-  ////////////////////////////////////////////////
-  faseCarga():void{
 
-  this.fasesCargadas++;
-  if(this.fasesCargadas == this.nFases){
-    this.cargaCompletada = true;
-  }
-
-}
-////////////////////////////////////////////////
 
 }

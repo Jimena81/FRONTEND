@@ -1,13 +1,13 @@
 <div class="contenedor">
 
-  <h1>Listado de poblaciones</h1>
+  <h1>Listado de inmuebles</h1>
 
   <div>
       <table class="table">
           <thead>
             <tr>
               <th scope="col">ID</th>
-              <th scope="col">TIPO</th>
+              <!-- <th scope="col">TIPO</th> -->
               <th scope="col">TITULAR</th>
               <th scope="col">DIRECCIÓN</th>
               <th scope="col">SUPERFICIE ÚTIL</th>
@@ -23,7 +23,7 @@
           <tbody>
             <tr *ngFor="let dato of Datos">
                 <th scope="row">{{dato.id}}</th>
-                <td>{{dato.tipo.nombre}}</td>
+                <!-- <td>{{dato.tipo.nombre}}</td> -->
                 <td>{{dato.titular}}</td>
                 <td>{{dato.direccionCompleta}}</td>
                 <td>{{dato.superficieUtil}}</td>
@@ -35,7 +35,7 @@
                 }">●</td>
                 <button type="button" class="btn btn-success btn-sm" [routerLink]="['/edit-inmueble',dato.id]"
                 >EDITAR</button>
-                <button type="button" class="btn btn-success btn-sm" [routerLink]="['/edit-poblacion',dato.id]"
+                <button type="button" class="btn btn-success btn-sm" [routerLink]="['/edit-inmueble',dato.id]"
                 >+IMAGEN</button>
 
 
