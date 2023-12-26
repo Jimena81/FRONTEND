@@ -28,6 +28,8 @@ import { ListInmuebleComponent } from './components/list-inmueble/list-inmueble.
 import { PreloaderComponent } from './components/preloader/preloader.component';
 import { AddInmuebleComponent } from './components/add-inmueble/add-inmueble.component';
 import { EditInmuebleComponent } from './components/edit-inmueble/edit-inmueble.component';
+import { CabeceraAdminComponent } from './components/cabecera-admin/cabecera-admin.component';
+import { AddImagenComponent } from './components/add-imagen/add-imagen.component';
 
 
 @NgModule({
@@ -56,6 +58,8 @@ import { EditInmuebleComponent } from './components/edit-inmueble/edit-inmueble.
     PreloaderComponent,
     AddInmuebleComponent,
     EditInmuebleComponent,
+    CabeceraAdminComponent,
+    AddImagenComponent,
 
   ],
   imports: [

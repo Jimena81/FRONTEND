@@ -23,49 +23,51 @@ export class EditInmuebleComponent {
     private _route:ActivatedRoute,
     private _router:Router
   ){}
+  //mapeamos los datos
+  inmueble:Inmueble;
 
-  inmueble:Inmueble={
-    activo:1,
-    amueblado:0,
-    apertura:"",
-    ascensor:0,
-    cp:"",
-    descripcion:"",
-    jardin:0,
-    nombreVia:"",
-    numero:"",
-    numeroBalcones:"",
-    numeroBanhos:"",
-    numeroHabitaciones:"",
-    orientacion:"",
-    piscina:0,
-    planta:"",
-    plazasGaraje:"",
-    portada:0,
-    precio:0,
-    puerta:"",
-    superficieConstruida:"",
-    superficieUtil:"",
-    tendedero:0,
-    tipoCalefaccion:"",
-    titular:"",
-    trastero:0,
-    via:"",
-    poblacion:{
-      nombre:"",
-      provincia:{
-        nombre:"",
-        activo:0
+  // inmueble:Inmueble={
+  //   activo:1,
+  //   amueblado:0,
+  //   apertura:"",
+  //   ascensor:0,
+  //   cp:"",
+  //   descripcion:"",
+  //   jardin:0,
+  //   nombreVia:"",
+  //   numero:"",
+  //   numeroBalcones:"",
+  //   numeroBanhos:"",
+  //   numeroHabitaciones:"",
+  //   orientacion:"",
+  //   piscina:0,
+  //   planta:"",
+  //   plazasGaraje:"",
+  //   portada:0,
+  //   precio:0,
+  //   puerta:"",
+  //   superficieConstruida:"",
+  //   superficieUtil:"",
+  //   tendedero:0,
+  //   tipoCalefaccion:"",
+  //   titular:"",
+  //   trastero:0,
+  //   via:"",
+  //   poblacion:{
+  //     nombre:"",
+  //     provincia:{
+  //       nombre:"",
+  //       activo:0
 
-      },
-      activo:0
-    },
-    tipo:{
-      nombre:"",
-      activo:0
-    }
+  //     },
+  //     activo:0
+  //   },
+  //   tipo:{
+  //     nombre:"",
+  //     activo:0
+  //   }
 
-  }
+  // }
 
 
   ngOnInit(): void {
@@ -144,7 +146,14 @@ export class EditInmuebleComponent {
   edit():void{
 
       this.inmueble.activo = Number(this.inmueble.activo);
-      this.inmueble.apertura=this.inmueble.apertura.toUpperCase();
+      this.inmueble.portada = Number(this.inmueble.portada);
+      this.inmueble.tendedero = Number(this.inmueble.tendedero);
+      this.inmueble.amueblado = Number(this.inmueble.amueblado);
+      this.inmueble.trastero = Number(this.inmueble.trastero);
+      this.inmueble.piscina = Number(this.inmueble.piscina);
+      this.inmueble.jardin = Number(this.inmueble.jardin);
+      this.inmueble.ascensor = Number(this.inmueble.ascensor);
+
 
       this._inmuebleService.updateInmueble(this.inmueble).subscribe({
         next:(datos)=>{console.log(datos)},

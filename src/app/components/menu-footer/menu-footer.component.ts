@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, } from '@angular/core';
+
 
 @Component({
   selector: 'app-menu-footer',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './menu-footer.component.css'
 })
 export class MenuFooterComponent {
+
+
 
 }

@@ -28,17 +28,7 @@ export class EditPoblacionComponent implements OnInit{
     private _router:Router
   ){}
 
-  poblacion:Poblacion={
-    id:0,
-    nombre:"",
-    provincia:{
-      id:0,
-      nombre:"",
-      activo:0
-    },
-    activo:1
-
-  }
+  poblacion:Poblacion;
 
 
   ngOnInit(): void {
@@ -69,11 +59,7 @@ export class EditPoblacionComponent implements OnInit{
           next:(datos)=>{
             console.log(datos)
             //mapeamos los datos en la interface TIPO
-          this.poblacion.id= datos.id
-          this.poblacion.nombre= datos.nombre
-          this.poblacion.activo= datos.activo//ASIGNA EL 1 TRUE Y 0 FALSE
-          this.poblacion.provincia.id= datos.provincia.id
-          },
+          this.poblacion=datos},
           error:(error)=>{this._router.navigate(["/error"])},
           complete:()=>{this.faseCarga()}
 

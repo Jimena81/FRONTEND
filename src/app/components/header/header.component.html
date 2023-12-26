@@ -1,6 +1,7 @@
 <header>
 
-  <app-carousel-home></app-carousel-home>
+  <app-carousel-home *ngIf="veoCarousel"></app-carousel-home>
+  <app-cabecera-admin *ngIf="!veoCarousel"/>
 
 
 </header>

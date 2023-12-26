@@ -14,6 +14,7 @@ import { EditPoblacionComponent } from './components/edit-poblacion/edit-poblaci
 import { ListInmuebleComponent } from './components/list-inmueble/list-inmueble.component';
 import { AddInmuebleComponent } from './components/add-inmueble/add-inmueble.component';
 import { EditInmuebleComponent } from './components/edit-inmueble/edit-inmueble.component';
+import { AddImagenComponent } from './components/add-imagen/add-imagen.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
 {path:"add-provincia",component:AddProvinciaComponent},
 {path:"add-poblacion",component:AddPoblacionComponent},
 {path:"add-inmueble",component:AddInmuebleComponent},
+{path:"add-imagen/:id",component:AddImagenComponent},
 {path:"edit-tipo/:id",component:EditTipoComponent},
 {path:"edit-provincia/:id",component:EditProvinciaComponent},
 {path:"edit-poblacion/:id",component:EditPoblacionComponent},

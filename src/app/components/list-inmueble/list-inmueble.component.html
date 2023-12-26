@@ -14,6 +14,7 @@
               <th scope="col">PRECIO</th>
               <th scope="col">DESCRIPCION</th>
               <th class="activo" scope="col">ACTIVO</th>
+              <th class="portada" scope="col">PORTADA</th>
               <th scope="col">EDITAR</th>
               <th scope="col">IMAGEN</th>
             </tr>
@@ -31,9 +32,13 @@
                   'activo-rojo':dato.activo == 0,
                   'activo-verde':dato.activo == 1
                 }">●</td>
+                <td [ngClass]="{
+                  'activo-rojo':dato.portada == 0,
+                  'activo-verde':dato.portada == 1
+                }">●</td>
                 <button type="button" class="btn btn-success btn-sm" [routerLink]="['/edit-inmueble',dato.id]"
                 >EDITAR</button>
-                <button type="button" class="btn btn-success btn-sm" [routerLink]="['/edit-inmueble',dato.id]"
+                <button type="button" class="btn btn-success btn-sm" [routerLink]="['/add-imagen',dato.id]"
                 >+IMAGEN</button>
 
 
