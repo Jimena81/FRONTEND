@@ -1,6 +1,7 @@
 <div class="contenedor">
 
   <h1>Añadir inmueble</h1>
+
   <form class="mx-auto" #form="ngForm" (ngSubmit)="add()">
 
     <div class="mb-3">
@@ -29,6 +30,8 @@
           <option *ngFor="let tipo of Tipos" value="{{tipo.id}}" >{{tipo.nombre}}</option>
         </select>
       </div>
+
+
 
       <div class="mb-3">
         <label for="Via">VÍA*</label>
@@ -60,13 +63,15 @@
           <option *ngFor="let poblacion of Poblaciones" value="{{poblacion.id}}" >{{poblacion.nombre}}</option>
         </select>
       </div>
-
       <div class="mb-3">
         <label for="provincia">PROVINCIA*</label>
         <select name="provincia" id="provincia" class="form-select" required [(ngModel)]="inmueble.poblacion.provincia.id">
           <option *ngFor="let poblacion of Poblaciones" value="{{poblacion.provincia.id}}" >{{poblacion.provincia.nombre}}</option>
         </select>
       </div>
+
+
+
       <div class="mb-3">
         <label for="superficieConstruida">SUPERFICIE CONSTRUÍDA*</label>
         <input id="superficieConstruida" type="text" name="superficieConstruida" required class="form-control" autocomplete="off" style="text-transform: uppercase" [(ngModel)]="inmueble.superficieConstruida">
@@ -148,43 +153,38 @@
           <option value="PROPANO">PROPANO</option>
         </select>
       </div>
-      <div class="mb-3">
-        <label class="label-check" for="ascensor">ASCENSOR</label>
-        <input id="ascensor" type="checkbox" name="ascensor"  class="form-check-input" autocomplete="off" [(ngModel)]="inmueble.ascensor">
-      </div>
-      <div class="mb-3">
-        <label class="label-check" for="jardin">JARDÍN</label>
-        <input id="jardin" type="checkbox" name="jardin"  class="form-check-input" autocomplete="off" [(ngModel)]="inmueble.jardin">
-      </div>
 
-
-      <div class="mb-3">
-        <label class="label-check" for="amueblado">AMUEBLADO</label>
-        <input id="amueblado" type="checkbox" name="amueblado"  class="form-check-input" autocomplete="off" [(ngModel)]="inmueble.amueblado">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="ascensor" name="ascensor" class="form-check-input" autocomplete="off" [(ngModel)]="inmueble.ascensor" checked>
+        <label class="form-check-label" for="ascensor">ASCENSOR</label>
       </div>
-      <div class="mb-3">
-        <label class="label-check" for="tendedero">TENDEDERO</label>
-        <input id="tendedero" type="checkbox" name="tendedero"  class="form-check-input" autocomplete="off" [(ngModel)]="inmueble.tendedero">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="jardin" name="jardin" class="form-check-input" autocomplete="off" [(ngModel)]="inmueble.jardin" checked>
+        <label class="form-check-label" for="jardin">JARDIN</label>
       </div>
-      <div class="mb-3">
-        <label class="label-check" for="piscina">PISCINA</label>
-        <input id="piscina" type="checkbox" name="piscina"  class="form-check-input" autocomplete="off" [(ngModel)]="inmueble.piscina">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="amueblado" name="amueblado" class="form-check-input" autocomplete="off" [(ngModel)]="inmueble.amueblado" checked>
+        <label class="form-check-label" for="amueblado">AMUEBLADO</label>
       </div>
-
-      <div class="mb-3">
-        <label class="label-check" for="tendedero">TRASTERO</label>
-        <input id="trastero" type="checkbox" name="trastero"  class="form-check-input" autocomplete="off" [(ngModel)]="inmueble.trastero">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="tendedero" name="tendedero" class="form-check-input" autocomplete="off" [(ngModel)]="inmueble.tendedero" checked>
+        <label class="form-check-label" for="tendedero">TENDEDERO</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="piscina" name="piscina" class="form-check-input" autocomplete="off" [(ngModel)]="inmueble.piscina" checked>
+        <label class="form-check-label" for="piscina">PISCINA</label>
       </div>
 
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="trastero" name="trastero" class="form-check-input" autocomplete="off" [(ngModel)]="inmueble.trastero" checked>
+        <label class="form-check-label" for="trastero">TRASTERO</label>
+      </div>
 
-
-
-  <div class="contenedor-boton">
+    <div class="contenedor-boton">
       <button type="submit" class="btn btn-md btn-primary" [disabled]="form.invalid">+Añadir</button>
     </div>
 
-
-
+  
 
   </form>
 

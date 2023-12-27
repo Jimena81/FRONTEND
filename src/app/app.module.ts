@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -30,6 +30,9 @@ import { AddInmuebleComponent } from './components/add-inmueble/add-inmueble.com
 import { EditInmuebleComponent } from './components/edit-inmueble/edit-inmueble.component';
 import { CabeceraAdminComponent } from './components/cabecera-admin/cabecera-admin.component';
 import { AddImagenComponent } from './components/add-imagen/add-imagen.component';
+import { ApiInterceptor } from './utils/api.interceptor';
+import { FichaInmuebleComponent } from './components/ficha-inmueble/ficha-inmueble.component';
+import { CarouselFichaComponent } from './components/carousel-ficha/carousel-ficha.component';
 
 
 @NgModule({
@@ -60,6 +63,9 @@ import { AddImagenComponent } from './components/add-imagen/add-imagen.component
     EditInmuebleComponent,
     CabeceraAdminComponent,
     AddImagenComponent,
+    FichaInmuebleComponent,
+    CarouselFichaComponent,
+
 
   ],
   imports: [
@@ -69,7 +75,14 @@ import { AddImagenComponent } from './components/add-imagen/add-imagen.component
     FormsModule,
 
   ],
-  providers: [],
+  providers: [
+    {
+     provide: HTTP_INTERCEPTORS,
+     useClass: ApiInterceptor,
+     multi:true,
+
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

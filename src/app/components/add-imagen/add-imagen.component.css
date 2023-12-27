@@ -1,7 +1,23 @@
 /* ================================================= */
 /* FIRST MOBILE */
 /* ================================================= */
+.contenedor{
+  padding:15px;
+  
+}
+ .imagen{
+   width:100px;
+   margin-left:5px;
+   margin-bottom:5px;
 
+}
+.contenedor-input-thumbs{
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding: 40px;
+}
 
 
 /* ================================================= */

@@ -1,39 +1,41 @@
-/*=============================================*/
-/*COLORES CORPORATIVOS*/
-/*=============================================*/
+/*================================================================*/
+/* COLORES CORPORATIVOS */
+/*================================================================*/
 :root{
 
-    --azul-corporativo:#256197;
-    --azul-corporativo-oscuro:#1a456b;
-    --amarillo-corporativo:#e8b610;
-    --gris-corporativo:#b1b34;
-    --griscorporativo-oscuro:#999999;
-    --color-rojo-activo:crimson;
-    --color-verde-activo:forestgreen;
+  --azul-corporativo:#256197;
+  --azul-corporativo-oscuro:#1a456b;
+  --amarillo-corporativo:#e8b610;
+  --gris-corporativo:#b1b3b4;
+  --gris-corporativo-oscuro:#999999;
+  --color-rojo-activo:crimson;
+  --color-verde-activo:forestgreen;
+
 
 }
-/*=============================================*/
-/*MOBILE FIRST*/
-/*=============================================*/
+
+/*================================================================*/
+/* FIRST MOBILE */
+/*================================================================*/
 
 *{
   margin:0;
   padding:0;
-  list-style:none;
+  list-style: none;
   text-decoration:none;
   border:0;
   outline:none;
   box-sizing: border-box;
 
 }
-body, html{
+
+body,html{
   height: 100%;
-  font-size: 16px;
-
-
+  font-size: 16px; /* 1rem */
 }
 
 h1{
+
   font-size: 24px;
   margin:0 0 15px 0;
   border-bottom: 1px var(--gris-corporativo) solid;
@@ -41,37 +43,54 @@ h1{
 }
 
 h2{
-  font-size: 18px;
-  margin:0;
 
+  font-size:18px;
+  margin:0;
 }
+
 h3{
-  font-size: 16px;
+
+  font-size:16px;
   margin:0;
 }
+
 a{
-  text-decoration:none;
+
+  text-decoration: none;
 }
-//son para los puntos de activo en los listados
+
+/* ES PARA QUE LOS SELECT DESPLEGABLES CON DATOS INACTIVOS DE LA BBDD APAREZCAN EN OTRO COLOR */
+ .select-inactivo{
+
+  color:white;
+  background-color:red;
+
+}
+
+
+/* ES PARA LOS PUNTOS DE ACTIVO EN LOS LIST*/
 .activo-rojo{
-  font-size: 2rem;
-  color:var(--color-rojo-activo);
-  text-align:center;
 
+  font-size:2rem;
+  color: var(--color-rojo-activo);
+  text-align:center;
 }
+
+/* ES PARA LOS PUNTOS DE ACTIVO EN LOS LIST */
 .activo-verde{
-  font-size: 2rem;
-  color:var(--color-verde-activo);
-  text-align:center;
 
-}
-.activo{
+  font-size:2rem;
+  color: var(--color-verde-activo);
   text-align:center;
 }
-td,th{
-  vertical-align:middle;
+
+/* ES PARA LOS PUNTOS DE ACTIVO EN LOS LIST */
+ .activo,.portada{
+
+  text-align:center;
 }
 
-.select-inactivo{
-  color:red;
-}
+/* ES PARA LOS LOS LIST */
+ td,th{
+  vertical-align: middle;
+} 

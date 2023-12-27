@@ -16,7 +16,7 @@ export class AddProvinciaComponent implements OnInit{
 
 
     ngOnInit(): void {
-    
+      
   }
 
 

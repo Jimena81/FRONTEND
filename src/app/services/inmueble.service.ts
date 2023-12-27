@@ -15,24 +15,36 @@ export class InmuebleService {
     private _http:HttpClient
   ) { }
 
+
+
   getInmuebles():Observable<Inmueble[]>{
 
     return this._http.get<Inmueble[]>(this.url + "inmuebles");
    }
-
-   addInmueble(inmueble:Inmueble):Observable<Inmueble>{
-
-    return this._http.post<Inmueble>(this.url + "inmueble",inmueble);
-  }
-
-    getInmueble(id:number):Observable<Inmueble>{
+  getInmueble(id:number):Observable<Inmueble>{
 
       return this._http.get<Inmueble>(this.url + "inmueble/" + id);
     }
+
+  getInmueblesPortada():Observable<Inmueble[]>{
+
+    return this._http.get<Inmueble[]>(this.url + "inmuebles-portada");
+   }
+
+   getInmueblesActivo():Observable<Inmueble[]>{
+
+    return this._http.get<Inmueble[]>(this.url + "inmuebles-activos");
+   }
+  addInmueble(inmueble:Inmueble):Observable<Inmueble>{
+
+      return this._http.post<Inmueble>(this.url + "inmueble",inmueble);
+    }
+
 
     updateInmueble(inmueble:Inmueble):Observable<Inmueble>{
 
       return this._http.put<Inmueble>(this.url + "inmueble",inmueble);
 
     }
+
 }

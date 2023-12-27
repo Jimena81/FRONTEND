@@ -4,6 +4,7 @@ import { Inmueble, Poblacion, Tipo } from '../../models/entity';
 import { InmuebleService } from '../../services/inmueble.service';
 import { PoblacionService } from '../../services/poblacion.service';
 import { TipoService } from '../../services/tipo.service';
+import { CommunicationService } from '../../services/communication.service';
 
 
 @Component({
@@ -70,7 +71,8 @@ export class AddInmuebleComponent implements OnInit {
     private _poblacionService:PoblacionService,
     private _tipoService:TipoService,
     private _inmuebleService:InmuebleService,
-    private _router:Router
+    private _router:Router,
+    private _communicationService:CommunicationService
 
   ){}
 
@@ -78,7 +80,8 @@ export class AddInmuebleComponent implements OnInit {
   ngOnInit(): void {
 
     this.getDatos();
-
+    this._communicationService.cambioPortada(false);
+    this._communicationService.cambioFooter(false);
   }
 
   getDatos():void{

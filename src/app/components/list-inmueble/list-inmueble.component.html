@@ -7,10 +7,9 @@
           <thead>
             <tr>
               <th scope="col">ID</th>
-              <!-- <th scope="col">TIPO</th> -->
+               <!-- <th scope="col">TIPO</th> -->
               <th scope="col">TITULAR</th>
               <th scope="col">DIRECCIÓN</th>
-              <th scope="col">SUPERFICIE ÚTIL</th>
               <th scope="col">PRECIO</th>
               <th scope="col">DESCRIPCION</th>
               <th class="activo" scope="col">ACTIVO</th>
@@ -25,7 +24,6 @@
                 <!-- <td>{{dato.tipo.nombre}}</td> -->
                 <td>{{dato.titular}}</td>
                 <td>{{dato.direccionCompleta}}</td>
-                <td>{{dato.superficieUtil}}</td>
                 <td>{{dato.precio}}</td>
                 <td>{{dato.descripcion}}</td>
                 <td [ngClass]="{
@@ -36,10 +34,14 @@
                   'activo-rojo':dato.portada == 0,
                   'activo-verde':dato.portada == 1
                 }">●</td>
-                <button type="button" class="btn btn-success btn-sm" [routerLink]="['/edit-inmueble',dato.id]"
-                >EDITAR</button>
-                <button type="button" class="btn btn-success btn-sm" [routerLink]="['/add-imagen',dato.id]"
-                >+IMAGEN</button>
+
+                 <td>
+              <button type="button" class="btn btn-success" mdbRipple [routerLink]="['/edit-inmueble',dato.id]">Editar</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-info" mdbRipple [routerLink]="['/add-imagen',dato.id]">+Imagen</button>
+            </td>
+
 
 
 
@@ -51,6 +53,8 @@
 
 
       </table>
+
+
 
 
 

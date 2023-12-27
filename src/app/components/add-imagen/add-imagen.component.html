@@ -1,1 +1,34 @@
-<p>add-imagen works!</p>
+<div class="contenedor">
+  <h1>Añadir Imagen</h1>
+
+<div class="contenedor-input-thumbs">
+
+    <div class="input-group mb-3">
+
+      <input #imagen id="imagen" type="file" name="imagen" class="form-control" accept=".jpg, .jpeg, .png" (change)="upload($event)" multiple>
+      <label class="input-group-text" for="imagen">UPLOAD</label>
+
+    </div>
+
+    <div *ngIf="urlImagen">
+
+      <img [src]="imagen" alt="imagen inmueble" *ngFor="let imagen of aImagenes">
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

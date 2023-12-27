@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Inmueble } from '../../models/entity';
 import { InmuebleService } from '../../services/inmueble.service';
+import { CommunicationService } from '../../services/communication.service';
 
 @Component({
   selector: 'app-list-inmueble',
@@ -13,10 +14,14 @@ export class ListInmuebleComponent implements OnInit {
 
   constructor(
     private _inmuebleService: InmuebleService,
+    private _communicationService: CommunicationService,
     private _router: Router
   ) {}
 
   ngOnInit(): void {
+
+    this._communicationService.cambioPortada(false);
+    this._communicationService.cambioFooter(false);
     this.getDatos();
   }
 
@@ -29,9 +34,7 @@ export class ListInmuebleComponent implements OnInit {
           dato.direccionCompleta = `${dato.via} ${dato.nombreVia} ${dato.numero} ${dato.planta}${dato.puerta}`;
         }
       },
-      error: (error) => {
-        this._router.navigate(['/error']);
-      },
+      error: (error) => {this._router.navigate(['/error']);},
       complete: () => {}
     });
   }
