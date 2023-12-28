@@ -33,6 +33,8 @@ import { AddImagenComponent } from './components/add-imagen/add-imagen.component
 import { ApiInterceptor } from './utils/api.interceptor';
 import { FichaInmuebleComponent } from './components/ficha-inmueble/ficha-inmueble.component';
 import { CarouselFichaComponent } from './components/carousel-ficha/carousel-ficha.component';
+import { NoImageDirective } from './directives/no-image.directive';
+import { EurosPipe } from './pipes/euros.pipe';
 
 
 @NgModule({
@@ -65,6 +67,8 @@ import { CarouselFichaComponent } from './components/carousel-ficha/carousel-fic
     AddImagenComponent,
     FichaInmuebleComponent,
     CarouselFichaComponent,
+    NoImageDirective,
+    EurosPipe,
 
 
   ],

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Inmueble } from '../../models/entity';
 
 @Component({
   selector: 'app-ficha-inmueble',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './ficha-inmueble.component.css'
 })
 export class FichaInmuebleComponent {
+
+  @Input() datos:Inmueble;
+
+
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InmuebleService } from '../../services/inmueble.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-home',
@@ -10,28 +11,27 @@ export class ListHomeComponent implements OnInit{
 
 aDatos:any[] = [];
 
-constructor(){
+constructor(
 
-}
-  ngOnInit(): void {//borrar esto
-    throw new Error('Method not implemented.');
+  private _inmuebleService:InmuebleService,
+  private _router:Router
+){}
+
+ngOnInit(): void {
+    this.getDatos();
+
+  };
+  getDatos():void{
+
+    this._inmuebleService.getInmueblesPortada().subscribe({
+
+      next: (datos)=>{this.aDatos = datos
+      console.log(this.aDatos)},
+      error: (error)=>{this._router.navigate(['/error'])},
+      complete: ()=>{}
+
+    });
+
   }
-
-
-
-
-
-// ngOnInit(): void {
-//     this.getDatos();
-
-//   };
-// getDatos():void{
-
-//   this._inmuebleService.getInmueblePortada().subscribe({
-
-//   })
-
-
-// }
 
 }

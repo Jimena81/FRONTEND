@@ -1,24 +1,30 @@
 <article class="ficha">
 
-  <app-carousel-ficha/>
+  <app-carousel-ficha [datosCarousel]="datos" />
 
-  <h3 class="titular">El Titular</h3>
-  <h4 class="poblacion">Población</h4>
-  <p class="precio">300.000 €</p>
+  <h3 class="titular">{{datos.titular}}</h3>
+  <h4 class="poblacion">{{datos.poblacion.nombre}}</h4>
+  <p class="precio">{{datos.precio | euros}}</p>
 
 <footer class="footer-ficha">
+  <div class="contenedor-botones-admin">
+    <button class="btn btn-success btn-sm" [routerLink]="['/edit-inmueble',datos.id]">Editar</button>
+    <button class="btn btn-info btn-sm" [routerLink]="['/add-imagen',datos.id]">+Imagen</button>
+
+
+  </div>
     <div class="contenedor-iconos">
         <div class="subcontenedor-iconos">
-          <span class="numero-elementos">5</span>
-          <!-- <img src="" alt="" class="icono"> buscar iconos-->
+          <span class="numero-elementos">{{datos.numeroBanhos}}</span>
+          <img src="assets/img/baños.png" alt="icono baño" class="icono">
         </div>
         <div class="subcontenedor-iconos">
-          <span class="numero-elementos">3</span>
-          <!-- <img src="" alt="" class="icono"> buscar iconos-->
+          <span class="numero-elementos">{{datos.numeroHabitaciones}}</span>
+          <img src="assets/img/habitaciones.png" alt="icono habitacion" class="icono">
         </div>
         <div class="subcontenedor-iconos">
-          <span class="numero-elementos">4</span>
-          <!-- <img src="" alt="" class="icono"> buscar iconos-->
+          <span class="numero-elementos">{{datos.planta}}</span>
+          <img src="assets/img/planta.png" alt="icono planta" class="icono">
         </div>
 
 

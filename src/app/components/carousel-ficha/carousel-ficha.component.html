@@ -1,18 +1,27 @@
-<div id="carouselFicha" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselFicha{{datosCarousel.id}}" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="assets/img/no-image.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="assets/img/no-image.jpg" class="d-block w-100" alt="...">
+
+    <!-- *ngFor en cada iteración nos da automaticamente de un índice
+    pero para utilizarlonecesitamos declararlo:En la it1, index=0
+    en la it2 index=1.... -->
+    <div [ngClass]="{
+      'carousel-item ':true,
+      'active': i==0
+    }" *ngFor="let imagen of datosCarousel.imagenes; let i=index">
+      <img appNoImage src="{{url+imagen.nombre}}" class="d-block w-100" alt="imagen piso">
     </div>
 
+    <!-- En el caso de que no haya imagenes -->
+    <div *ngIf="datosCarousel.imagenes.length == 0" class="carousel-">
+      <img src="assets/img/no-image.jpg" class="no-imagen" alt="no imagen">
+   </div>
+
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselFicha" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselFicha'+datosCarousel.id" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselFicha" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carouselFicha'+datosCarousel.id" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>

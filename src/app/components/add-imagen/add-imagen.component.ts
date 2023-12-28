@@ -35,15 +35,10 @@ export class AddImagenComponent implements OnInit {
 
   getDatos():void{
 
-    //El primer dato que necesito es es id de la ruta, porque sin él no podemos
-    //acceder a los atributos del abjeto a modificar
+
     this._route.params.subscribe({
 
-      next:(params)=>{
-        this.id=params['id'];
-
-      }
-      ,
+      next:(params)=>{this.id=params['id']},
       error:(error)=>{this._router.navigate(["/error"])}
 
     });//NO TIENE COMPLETE
@@ -71,10 +66,8 @@ export class AddImagenComponent implements OnInit {
               this.urlImagen = datos.url;
               this.aImagenes.push(this.urlImagen);
 
-            }
-            ,
-            error: (error)=>{this._router.navigate(['/error'])}
-            ,
+            },
+            error: (error)=>{this._router.navigate(['/error'])},
             complete: ()=>{}
 
 

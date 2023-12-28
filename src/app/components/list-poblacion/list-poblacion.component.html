@@ -22,8 +22,9 @@
                   'activo-rojo':dato.activo == 0,
                   'activo-verde':dato.activo == 1
                 }">●</td>
-                <button type="button" class="btn btn-success btn-sm" [routerLink]="['/edit-poblacion',dato.id]"
-                >EDITAR</button>
+                 <td>
+                  <button type="button" class="btn btn-success" mdbRipple [routerLink]="['/edit-poblacion',dato.id]">Editar</button>
+                </td>
 
 
 
