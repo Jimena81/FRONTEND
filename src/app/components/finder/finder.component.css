@@ -1,7 +1,13 @@
 /* ================================================= */
 /* FIRST MOBILE */
 /* ================================================= */
+.contenedor{
+  padding:20px;
+  background-color: var(--amarillo-corporativo);
+  border-radius:10px;
+  margin-bottom:10px;
 
+}
 
 
 

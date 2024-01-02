@@ -27,7 +27,7 @@ const routes: Routes = [
 {path:"list-provincia",component:ListProvinciaComponent},
 {path:"list-poblacion",component:ListPoblacionComponent},
 {path:"list-inmueble",component:ListInmuebleComponent},
-{path:"list-finder",component:ListFinderComponent},
+{path:"list-finder/:ti/:po/:op",component:ListFinderComponent},
 {path:"add-tipo",component:AddTipoComponent},
 {path:"add-provincia",component:AddProvinciaComponent},
 {path:"add-poblacion",component:AddPoblacionComponent},

@@ -35,6 +35,13 @@ export class InmuebleService {
 
     return this._http.get<Inmueble[]>(this.url + "inmuebles-activos");
    }
+
+   getInmueblesFinder(tipo:number, poblacion:number, operacion:string):Observable<Inmueble[]>{
+
+    return this._http.get<Inmueble[]>(this.url + "inmuebles/" + tipo + "/" + poblacion + "/" + operacion);
+   }
+
+
   addInmueble(inmueble:Inmueble):Observable<Inmueble>{
 
       return this._http.post<Inmueble>(this.url + "inmueble",inmueble);
@@ -46,5 +53,7 @@ export class InmuebleService {
       return this._http.put<Inmueble>(this.url + "inmueble",inmueble);
 
     }
+
+
 
 }
