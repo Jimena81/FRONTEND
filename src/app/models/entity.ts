@@ -25,7 +25,8 @@ export interface Inmueble{
   amueblado:number;
   apertura:string;
   ascensor:number;
-  cp:string;//============ no está en Java
+  cp:string;
+  operacion:string;
   descripcion:string;
   jardin:number;
   nombreVia:string;

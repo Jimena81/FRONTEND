@@ -5,7 +5,11 @@
 .no-imagen{
 
   max-width:100%;
-  heigth:auto;
+  height:auto;
+}
+.carousel-item img {
+  width: 100%;
+  height: auto;
 }
 
 /* ================================================= */
@@ -35,6 +39,39 @@
 /* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
 @media only screen and (min-width:992px){
 
+/* Estilo para el contenedor del carrusel */
+#carouselFicha {
+  width: 80%; /* Ajusta según tus necesidades */
+  margin: auto; /* Centrar el carrusel en la página */
+  overflow: hidden; /* Para ocultar las imágenes que no están en la vista */
+}
+
+/* Estilo para cada elemento del carrusel */
+.carousel-item img {
+  width: 100%; /* Hace que la imagen ocupe el 100% del ancho del contenedor */
+  height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción original de la imagen */
+  display: block; /* Elimina el espacio extra debajo de las imágenes */
+}
+
+/* Estilo para las flechas de navegación del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Ancho de las flechas, ajusta según tus necesidades */
+}
+
+/* Estilo para los íconos de navegación del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000; /* Color de fondo de las flechas, ajusta según tus necesidades */
+  border-radius: 50%; /* Bordes redondeados */
+  padding: 10px; /* Ajusta según tus necesidades */
+}
+
+/* Estilo para el contenedor de imágenes cuando no hay imágenes */
+.no-imagen {
+  width: 100%; /* Hace que la imagen ocupe el 100% del ancho del contenedor */
+  height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción original de la imagen */
+}
 
 
 

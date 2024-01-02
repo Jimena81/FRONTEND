@@ -1,4 +1,4 @@
-<div id="carouselFicha{{datosCarousel.id}}" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselFicha{{datosCarousel.id}}" class="carousel slide" data-bs-ride="false">
   <div class="carousel-inner">
 
     <!-- *ngFor en cada iteración nos da automaticamente de un índice
@@ -8,11 +8,11 @@
       'carousel-item ':true,
       'active': i==0
     }" *ngFor="let imagen of datosCarousel.imagenes; let i=index">
-      <img appNoImage src="{{url+imagen.nombre}}" class="d-block w-100" alt="imagen piso">
+      <img appNoImage src="{{url+imagen.nombre}}" class=" w-100" alt="imagen piso">
     </div>
 
     <!-- En el caso de que no haya imagenes -->
-    <div *ngIf="datosCarousel.imagenes.length == 0" class="carousel-">
+    <div *ngIf="datosCarousel.imagenes.length == 0">
       <img src="assets/img/no-image.jpg" class="no-imagen" alt="no imagen">
    </div>
 

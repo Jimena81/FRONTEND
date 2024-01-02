@@ -25,10 +25,16 @@ ngOnInit(): void {
 
     this._inmuebleService.getInmueblesPortada().subscribe({
 
-      next: (datos)=>{this.aDatos = datos
-      console.log(this.aDatos)},
-      error: (error)=>{this._router.navigate(['/error'])},
+      next: (datos)=>{
+        this.aDatos = datos;
+
+      }
+      ,
+      error: (error)=>{this._router.navigate(['/error'])}
+      ,
       complete: ()=>{}
+
+
 
     });
 

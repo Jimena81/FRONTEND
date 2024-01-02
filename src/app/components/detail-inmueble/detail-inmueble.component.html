@@ -1,0 +1,87 @@
+<div class="contenedor">
+
+  <h3 class="titular">{{elInmueble.titular}}</h3>
+
+
+
+  <section class="contenido-ficha">
+    <app-carousel-ficha [datosCarousel]="elInmueble"/>
+
+    <h1>{{elInmueble.operacion}} {{elInmueble.precio | euros}}</h1>
+
+    <div class="contenedor-iconos">
+      <div class="iconos">
+        <span class="numero-elementos">{{elInmueble.numeroBanhos}}</span>
+        <img src="assets/img/baños.png" alt="baños">
+      </div>
+
+      <div class="iconos">
+        <span class="numero-elementos">{{elInmueble.numeroHabitaciones}}</span>
+        <img src="assets/img/habitaciones.png" alt="baños">
+      </div>
+
+      <div class="iconos">
+        <span class="numero-elementos">{{elInmueble.planta}}</span>
+        <img src="assets/img/planta.png" alt="baños">
+      </div>
+
+    </div>
+    <h5>Descripción</h5>
+    <p>{{elInmueble.descripcion}}</p>
+
+    <h5>Datos Básicos</h5>
+    <div class="contenedor-detalles">
+      <div>
+        <i class="fa-solid fa-ruler-combined"></i><span>Superficie Construída: {{elInmueble.superficieConstruida | metrosCuadrados}}</span>
+      </div>
+      <div>
+        <i class="fa-solid fa-ruler-combined"></i><span>Superficie Útil: {{elInmueble.superficieUtil | metrosCuadrados}}</span>
+      </div>
+      <div>
+        <i class="fa-solid fa-bed"></i><span>Habitacione: {{elInmueble.numeroHabitaciones}}</span>
+      </div>
+      <div>
+        <i class="fa-solid fa-bath"></i><span>Baños: {{elInmueble.numeroBanhos}}</span>
+      </div>
+        <div>
+          <i class="fa-solid fa-stairs"></i><span>Planta: {{elInmueble.planta}}</span>
+        </div>
+    </div>
+
+  <h5>Muebles y Acabados</h5>
+    <div>
+      <i class="fa-solid fa-couch"></i><span>Amueblado: {{elInmueble.amueblado | amueblado}}</span>
+    </div>
+
+  <h5>Equipamiento e instalaciones</h5>
+    <div>
+      <i class="fa-solid fa-elevator"></i><span>Ascensor: {{elInmueble.ascensor | sino }}</span>
+    </div>
+    <div>
+      <i class="fa-solid fa-temperature-arrow-up"></i><span>Calefaccion: {{elInmueble.tipoCalefaccion}}</span>
+    </div>
+    <div>
+      <i class="fa-solid fa-car"></i><span>Plazas de Garaje: {{elInmueble.plazasGaraje}}</span>
+    </div>
+
+  </section>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

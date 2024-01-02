@@ -2,7 +2,7 @@
 
   <app-carousel-ficha [datosCarousel]="datos" />
 
-  <h3 class="titular">{{datos.titular}}</h3>
+  <h3 class="titular">{{datos.titular}}  {{datos.operacion}}</h3>
   <h4 class="poblacion">{{datos.poblacion.nombre}}</h4>
   <p class="precio">{{datos.precio | euros}}</p>
 
@@ -10,6 +10,8 @@
   <div class="contenedor-botones-admin">
     <button class="btn btn-success btn-sm" [routerLink]="['/edit-inmueble',datos.id]">Editar</button>
     <button class="btn btn-info btn-sm" [routerLink]="['/add-imagen',datos.id]">+Imagen</button>
+    <button class="btn btn-info btn-sm" [routerLink]="['/detail-inmueble',datos.id]">Ver</button>
+
 
 
   </div>

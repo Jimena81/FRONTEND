@@ -2,16 +2,14 @@
 /* FIRST MOBILE */
 /* ================================================= */
 
-.contenedor-fichas{
 
-  display: flex;
-  flex-direction: column;
 
-}
 
-.ficha{
-  width: 100%;
-}
+
+
+
+
+
 
 
 /* ================================================= */
@@ -22,17 +20,6 @@
 @media only screen and (min-width:576px){
 
 
-  .contenedor-fichas{
-
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-
-  }
-
-  .ficha{
-      width: 49%;
-  }
 
 
 
@@ -52,9 +39,7 @@
 /* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
 @media only screen and (min-width:992px){
 
-  .ficha{
-      width: 31%;
-  }
+
 
 
 }
@@ -62,9 +47,7 @@
 /* MAYOR O IGUAL DE 1200PX (A PARTIR DE 1200PX INCLUSIVE) - PC GRANDES, TELEVISIONES */
 @media only screen and (min-width:1200px){
 
-  .ficha{
-      width: 24%;
-  }
+
 
 
 }

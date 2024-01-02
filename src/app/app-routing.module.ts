@@ -15,6 +15,8 @@ import { ListInmuebleComponent } from './components/list-inmueble/list-inmueble.
 import { AddInmuebleComponent } from './components/add-inmueble/add-inmueble.component';
 import { EditInmuebleComponent } from './components/edit-inmueble/edit-inmueble.component';
 import { AddImagenComponent } from './components/add-imagen/add-imagen.component';
+import { DetailInmuebleComponent } from './components/detail-inmueble/detail-inmueble.component';
+import { ListFinderComponent } from './components/list-finder/list-finder.component';
 
 
 const routes: Routes = [
@@ -25,6 +27,7 @@ const routes: Routes = [
 {path:"list-provincia",component:ListProvinciaComponent},
 {path:"list-poblacion",component:ListPoblacionComponent},
 {path:"list-inmueble",component:ListInmuebleComponent},
+{path:"list-finder",component:ListFinderComponent},
 {path:"add-tipo",component:AddTipoComponent},
 {path:"add-provincia",component:AddProvinciaComponent},
 {path:"add-poblacion",component:AddPoblacionComponent},
@@ -34,6 +37,7 @@ const routes: Routes = [
 {path:"edit-provincia/:id",component:EditProvinciaComponent},
 {path:"edit-poblacion/:id",component:EditPoblacionComponent},
 {path:"edit-inmueble/:id",component:EditInmuebleComponent},
+{path:"detail-inmueble/:id",component:DetailInmuebleComponent},
 
 
 

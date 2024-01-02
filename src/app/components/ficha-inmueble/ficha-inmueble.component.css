@@ -1,56 +1,83 @@
 /* ================================================= */
 /* FIRST MOBILE */
 /* ================================================= */
+
 .ficha{
-  width:100%;
+  /* width: 100%; */
   border:1px solid var(--gris-corporativo);
-  border-radius:5px;
-  padding:10px;
-  margin-bottom:5px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+
 }
 
 
 .icono{
   height: 24px;
   filter:invert(1);
-
 }
+
 .numero-elementos{
+
   font-size: 1.5rem;
-  padding-right:2px;
-  color:white;
+  padding-right: 3px;
+  color: white;
+}
+
+.numero-planta{
+
+  font-size: 1rem;
+  padding-right: 5px;
+  color: white;
+}
+
+.titular,.poblacion{
+
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.datos{
+  padding: 10px 0 5px 10px;
+  cursor: pointer;
 
 }
-.titular, .precio, .poblacion{
 
-  font-size:1.5em;
-  display:flex;
-  justify-content:flex-end;
+.precio{
 
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
 }
-.contenedor-iconos{
-  display:flex;
-  flex-direction:row;
-  justify-content:flex-end;
-  font-size:2rem;
-}
-.subcontenedor-iconos{
-  display:flex;
-  align-items:center;
 
+.contenedor-iconos div{
 
+  display: flex;
+  align-items: center;
 }
+
 .footer-ficha{
-  background-color: var(--azul-corporativo-oscuro);
-  padding: 3px 15px 3px 15px;
-  border-radius:5px;
-  display:flex;
-  justify-content:space-between;
+  background-color: var(--gris-corporativo-oscuro);
+  padding:3px 15px 3px 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-}
+
+
 .contenedor-botones-admin button{
- margin-right:10px;
+  margin-right: 10px;
 }
+
+.contenedor-iconos{
+  display: flex;
+  justify-content: flex-end;
+  gap:10px;
+}
+
 
 /* ================================================= */
 /* MEDIA QUERIES */

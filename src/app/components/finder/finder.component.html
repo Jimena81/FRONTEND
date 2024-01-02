@@ -1,0 +1,42 @@
+<div class="contenedor">
+
+  <app-preloader *ngIf="!cargaCompletada"></app-preloader>
+
+  <!-- < *ngIf="cargaCompletada" class="contenedor-finder"> -->
+    <form class="mx-auto" #form="ngForm" (ngSubmit)="find()">
+      <div class="mb-3">
+
+          <label for="poblacion">POBLACIÓN*:</label>
+          <select name="poblacion" id="poblacion" class="form-select" required [(ngModel)]="poblacionElegida">
+              <option *ngFor="let poblacion of aPoblaciones" value="{{poblacion.id}}">{{poblacion.nombre}}</option>
+          </select>
+
+      </div>
+
+
+      <div class="mb-3">
+
+          <label for="tipo">TIPO*:</label>
+          <select name="tipo" id="tipo" class="form-select" required [(ngModel)]="tipoElegido">
+              <option *ngFor="let tipo of aTipos" value="{{tipo.id}}">{{tipo.nombre}}</option>
+          </select>
+
+      </div>
+
+      <div class="mb-3">
+
+          <label for="operacion">OPERACION*:</label>
+          <select name="operacion" id="operacion" class="form-select" required [(ngModel)]="operacionElegida">
+              <option *ngFor="let operacion of aOperaciones" value="{{operacion}}">{{operacion}}</option>
+          </select>
+
+      </div>
+
+      <div class="contenedor-boton">
+
+        <button type="submit" class="btn btn-md btn-primary" [disabled]="form.invalid">Buscar</button>
+      </div>
+
+    </form>
+
+</div>

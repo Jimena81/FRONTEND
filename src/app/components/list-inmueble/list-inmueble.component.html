@@ -11,6 +11,7 @@
               <th scope="col">TITULAR</th>
               <th scope="col">DIRECCIÓN</th>
               <th scope="col">PRECIO</th>
+              <th scope="col">OPERACIÓN</th>
               <th scope="col">DESCRIPCION</th>
               <th class="activo" scope="col">ACTIVO</th>
               <th class="portada" scope="col">PORTADA</th>
@@ -25,6 +26,7 @@
                 <td>{{dato.titular}}</td>
                 <td>{{dato.direccionCompleta}}</td>
                 <td>{{dato.precio}}</td>
+                <td>{{dato.operacion}}</td>
                 <td>{{dato.descripcion}}</td>
                 <td [ngClass]="{
                   'activo-rojo':dato.activo == 0,

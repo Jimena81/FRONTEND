@@ -35,6 +35,13 @@ import { FichaInmuebleComponent } from './components/ficha-inmueble/ficha-inmueb
 import { CarouselFichaComponent } from './components/carousel-ficha/carousel-ficha.component';
 import { NoImageDirective } from './directives/no-image.directive';
 import { EurosPipe } from './pipes/euros.pipe';
+import { DetailInmuebleComponent } from './components/detail-inmueble/detail-inmueble.component';
+import { MetrosCuadradosPipe } from './pipes/metros-cuadrados.pipe';
+import { AmuebladoPipe } from './pipes/amueblado.pipe';
+import { SinoPipe } from './pipes/sino.pipe';
+import { ListFinderComponent } from './components/list-finder/list-finder.component';
+import { FinderComponent } from './components/finder/finder.component';
+
 
 
 @NgModule({
@@ -69,6 +76,12 @@ import { EurosPipe } from './pipes/euros.pipe';
     CarouselFichaComponent,
     NoImageDirective,
     EurosPipe,
+    DetailInmuebleComponent,
+    MetrosCuadradosPipe,
+    AmuebladoPipe,
+    SinoPipe,
+    ListFinderComponent,
+    FinderComponent,
 
 
   ],

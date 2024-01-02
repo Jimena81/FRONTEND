@@ -39,6 +39,7 @@ export class EditInmuebleComponent {
   //   numeroBalcones:"",
   //   numeroBanhos:"",
   //   numeroHabitaciones:"",
+  //    operacion:"",
   //   orientacion:"",
   //   piscina:0,
   //   planta:"",

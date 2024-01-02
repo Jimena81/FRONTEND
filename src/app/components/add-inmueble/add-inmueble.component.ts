@@ -37,6 +37,7 @@ export class AddInmuebleComponent implements OnInit {
     numeroBanhos:"",
     numeroHabitaciones:"",
     orientacion:"",
+    operacion:"",
     piscina:0,
     planta:"",
     plazasGaraje:"",

@@ -20,6 +20,14 @@
         <textarea name="descripcion" id="descripcion" class="form-control" autocomplete="off"  rows="3" maxlength="3500" [(ngModel)]="inmueble.descripcion"></textarea>
       </div>
       <div class="mb-3">
+        <label for="operacion">OPERACIÓN*</label>
+        <select name="operacion" id="operacion" class="form-select" required [(ngModel)]=" inmueble.operacion">
+          <option value="VENTA">VENTA</option>
+          <option value="ALQUILER">ALQUILER</option>
+          <option value="TRASPASO">TRASPASO</option>
+        </select>
+      </div>
+      <div class="mb-3">
         <label for="precio">PRECIO*</label>
         <input id="precio" type="text" name="precio" required class="form-control" autocomplete="off" style="text-transform: uppercase" [(ngModel)]="inmueble.precio">
       </div>
