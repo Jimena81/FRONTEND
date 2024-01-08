@@ -36,7 +36,7 @@ export class DetailInmuebleComponent implements OnInit {
 
   getDatos():void{
 
-        //El primer dato que necesito es es id de la ruta, porque sin él no podemos
+    //El primer dato que necesito es es id de la ruta, porque sin él no podemos
     //acceder a los atributos del abjeto a modificar
     this._route.params.subscribe({
       next:(params)=>{this.id=params['id']},

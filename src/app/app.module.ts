@@ -41,6 +41,7 @@ import { AmuebladoPipe } from './pipes/amueblado.pipe';
 import { SinoPipe } from './pipes/sino.pipe';
 import { ListFinderComponent } from './components/list-finder/list-finder.component';
 import { FinderComponent } from './components/finder/finder.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -82,6 +83,7 @@ import { FinderComponent } from './components/finder/finder.component';
     SinoPipe,
     ListFinderComponent,
     FinderComponent,
+    LoginComponent,
 
 
   ],

@@ -7,7 +7,7 @@ export class SinoPipe implements PipeTransform {
 
   transform(value: number):string {
 
-    return value==0 ?"No" : "Si";
+    return value==0 ? "No" : "Si";
   }
 
 }

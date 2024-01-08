@@ -72,7 +72,7 @@ export class FinderComponent implements OnInit {
     }
 
     find(): void {
-      this._router.navigate(['/list-finder',this.poblacionElegida,this.tipoElegido, this.operacionElegida])
+      this._router.navigate(['/list-finder',this.tipoElegido,this.poblacionElegida, this.operacionElegida])
     }
 
     ////////////////////////////////////////////////

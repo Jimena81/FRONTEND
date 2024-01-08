@@ -14,7 +14,11 @@ import { CommunicationService } from '../../services/communication.service';
 })
 export class AddInmuebleComponent implements OnInit {
 
-
+/////////////////////////////////////////////////
+nFases:number=2;
+cargaCompletada:boolean=false;
+fasesCargadas:number=0;
+/////////////////////////////////////////////////
 
 
   Poblaciones:Poblacion[];
@@ -94,7 +98,7 @@ export class AddInmuebleComponent implements OnInit {
       ,
       error: (error)=>{this._router.navigate(['/error'])}
       ,
-      complete: ()=>{}
+      complete: ()=>{this.faseCarga();}
 
     });
 
@@ -106,7 +110,7 @@ export class AddInmuebleComponent implements OnInit {
       ,
       error: (error)=>{this._router.navigate(['/error'])}
       ,
-      complete: ()=>{}
+      complete: ()=>{this.faseCarga();}
 
     });
 
@@ -140,7 +144,16 @@ export class AddInmuebleComponent implements OnInit {
     });
 
   }
+ ////////////////////////////////////////////////
+ faseCarga():void{
 
+  this.fasesCargadas++;
+  if(this.fasesCargadas == this.nFases){
+    this.cargaCompletada = true;
+  }
+
+}
+////////////////////////////////////////////////
 
 
 

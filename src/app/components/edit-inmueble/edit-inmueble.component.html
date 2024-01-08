@@ -34,7 +34,7 @@
       <div class="mb-3">
         <label for="tipo">TIPO*</label>
         <select name="tipo" id="tipo" class="form-select" required [(ngModel)]="inmueble.tipo.id">
-          <option *ngFor="let tipo of Tipos" value="{{tipo.id}}" >{{tipo.nombre}}</option>
+          <option *ngFor="let tipo of aTipos" value="{{tipo.id}}" >{{tipo.nombre}}</option>
         </select>
       </div>
 
@@ -65,14 +65,14 @@
       <div class="mb-3">
         <label for="poblacion">POBLACIÓN*</label>
         <select name="poblacion" id="poblacion" class="form-select" required [(ngModel)]="inmueble.poblacion.id">
-          <option *ngFor="let poblacion of Poblaciones" value="{{poblacion.id}}" >{{poblacion.nombre}}</option>
+          <option *ngFor="let poblacion of aPoblaciones" value="{{poblacion.id}}" >{{poblacion.nombre}}</option>
         </select>
       </div>
 
       <div class="mb-3">
         <label for="provincia">PROVINCIA*</label>
         <select name="provincia" id="provincia" class="form-select" required [(ngModel)]="inmueble.poblacion.provincia.id">
-          <option *ngFor="let poblacion of Poblaciones" value="{{poblacion.provincia.id}}" >{{poblacion.provincia.nombre}}</option>
+          <option *ngFor="let poblacion of aPoblaciones" value="{{poblacion.provincia.id}}" >{{poblacion.provincia.nombre}}</option>
         </select>
       </div>
       <div class="mb-3">

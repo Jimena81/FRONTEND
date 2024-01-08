@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Inmueble } from '../../models/entity';
 import { GLOBAL } from '../../services/global';
 
 @Component({

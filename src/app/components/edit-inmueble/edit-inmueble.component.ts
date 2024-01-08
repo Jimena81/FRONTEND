@@ -1,27 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Inmueble, Poblacion, Provincia, Tipo } from '../../models/entity';
 import { InmuebleService } from '../../services/inmueble.service';
 
 import { ActivatedRoute, Router } from '@angular/router';
 import { PoblacionService } from '../../services/poblacion.service';
 import { TipoService } from '../../services/tipo.service';
+import { CommunicationService } from '../../services/communication.service';
 
 @Component({
   selector: 'app-edit-inmueble',
   templateUrl: './edit-inmueble.component.html',
   styleUrl: './edit-inmueble.component.css'
 })
-export class EditInmuebleComponent {
+export class EditInmuebleComponent implements OnInit {
+
+/////////////////////////////////////////////////
+nFases:number=3;
+cargaCompletada:boolean=false;
+fasesCargadas:number=0;
+/////////////////////////////////////////////////
+
+
   id:number;
-  Poblaciones:Poblacion[]=[];
-  Tipos:Tipo[]=[];
+  aPoblaciones:Poblacion[]=[];
+  aTipos:Tipo[]=[];
 
   constructor(
     private _inmuebleService:InmuebleService,
     private _poblacionService:PoblacionService,
     private _tipoService:TipoService,
     private _route:ActivatedRoute,
-    private _router:Router
+    private _router:Router,
+    private _communicationService:CommunicationService
   ){}
   //mapeamos los datos
   inmueble:Inmueble;
@@ -72,6 +82,8 @@ export class EditInmuebleComponent {
 
 
   ngOnInit(): void {
+    this._communicationService.cambioPortada(false);
+    this._communicationService.cambioFooter(false);
     this.getDatos();
   }
 
@@ -80,20 +92,20 @@ export class EditInmuebleComponent {
   //el primer dato que necesitamos es el id de la ruta
   //para acceder a los atributos del objeto
       this._route.params.subscribe({
-        next:(params)=>{this.id=params['id']},
+        next:(params)=>{this.id = params['id']},
         error:(error)=>{this._router.navigate(["/error"])},
         //NO TIENE COMPLETE
         });
 
         this._poblacionService.getPoblaciones().subscribe({
-          next:(datos)=>{this.Poblaciones=datos},
+          next:(datos)=>{this.aPoblaciones = datos},
           error:(error)=>{this._router.navigate(["/error"])},
-          complete:()=>{}
+          complete:()=>{this.faseCarga()}
         });
         this._tipoService.getTipos().subscribe({
-          next:(datos)=>{this.Tipos=datos},
+          next:(datos)=>{this.aTipos = datos},
           error:(error)=>{this._router.navigate(["/error"])},
-          complete:()=>{}
+          complete:()=>{this.faseCarga()}
         });
 
     //yA TENEMOS EL ID. LLAMAMOS A LA API
@@ -138,7 +150,7 @@ export class EditInmuebleComponent {
           // this.inmueble.trastero= datos.trastero
         },
           error:(error)=>{this._router.navigate(["/error"])},
-          complete:()=>{}
+          complete:()=>{this.faseCarga()}
 
       })
 
@@ -166,4 +178,17 @@ export class EditInmuebleComponent {
 
 
 }
+
+
+
+ ////////////////////////////////////////////////
+ faseCarga():void{
+
+  this.fasesCargadas++;
+  if(this.fasesCargadas == this.nFases){
+    this.cargaCompletada = true;
+  }
+
+}
+////////////////////////////////////////////////
 }

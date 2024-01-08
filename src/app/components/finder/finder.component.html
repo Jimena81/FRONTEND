@@ -2,13 +2,16 @@
 
   <app-preloader *ngIf="!cargaCompletada"></app-preloader>
 
-  <!-- < *ngIf="cargaCompletada" class="contenedor-finder"> -->
-    <form class="mx-auto" #form="ngForm" (ngSubmit)="find()">
+  
+    <form *ngIf="cargaCompletada" class="mx-auto" #form="ngForm" (ngSubmit)="find()">
+
+      <h6 class="titulo-busqueda">¡BUSCA TU INMUEBLE!</h6>
+
       <div class="mb-3">
 
           <label for="poblacion">POBLACIÓN*:</label>
           <select name="poblacion" id="poblacion" class="form-select" required [(ngModel)]="poblacionElegida">
-              <option *ngFor="let poblacion of aPoblaciones" value="{{poblacion.id}}">{{poblacion.nombre}}</option>
+              <option [ngClass]="{'select-inactivo': poblacion.activo==0}" *ngFor="let poblacion of aPoblaciones" value="{{poblacion.id}}">{{poblacion.nombre}}</option>
           </select>
 
       </div>

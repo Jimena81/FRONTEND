@@ -1,9 +1,10 @@
 <section class="contenedor">
 
-  <h2>Las Mejores Opciones</h2>
-<div class="contenedor-fichas">
-  <app-ficha-inmueble [datos]="inmueble" *ngFor="let inmueble of aDatos"/>
-</div>
+  <h2>¡Las Mejores Oportunidades!</h2>
+  <app-preloader *ngIf="!cargaCompletada"></app-preloader>
+  <div *ngIf="cargaCompletada" class="contenedor-fichas">
+    <app-ficha-inmueble class="ficha" [datos]="inmueble" *ngFor="let inmueble of aDatos"/>
+  </div>
 
 
 </section>

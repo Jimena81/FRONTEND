@@ -1,35 +1,41 @@
 <div class="contenedor">
+  <app-preloader *ngIf="!cargaCompletada"></app-preloader>
 
   <h3 class="titular">{{elInmueble.titular}}</h3>
 
+  <section *ngIf="cargaCompletada" class="contenido-ficha">
 
-
-  <section class="contenido-ficha">
     <app-carousel-ficha [datosCarousel]="elInmueble"/>
 
-    <h1>{{elInmueble.operacion}} {{elInmueble.precio | euros}}</h1>
+    <h2 class="precio">{{elInmueble.operacion}} {{elInmueble.precio | euros}}</h2>
 
     <div class="contenedor-iconos">
-      <div class="iconos">
+      <div>
         <span class="numero-elementos">{{elInmueble.numeroBanhos}}</span>
-        <img src="assets/img/baños.png" alt="baños">
+        <img class="icono" src="assets/img/baños.png" alt="icono baños">
       </div>
 
-      <div class="iconos">
+      <div>
         <span class="numero-elementos">{{elInmueble.numeroHabitaciones}}</span>
-        <img src="assets/img/habitaciones.png" alt="baños">
+        <img class="icono" src="assets/img/habitaciones.png" alt="icono habitaciones">
       </div>
 
-      <div class="iconos">
+      <div>
         <span class="numero-elementos">{{elInmueble.planta}}</span>
-        <img src="assets/img/planta.png" alt="baños">
+        <img class="icono" src="assets/img/planta.png" alt="icono planta">
       </div>
 
     </div>
-    <h5>Descripción</h5>
-    <p>{{elInmueble.descripcion}}</p>
 
-    <h5>Datos Básicos</h5>
+
+    <h5 class="subseccion">Descripción</h5>
+
+    <div class="contenedor-descripcion">
+      <p>{{elInmueble.descripcion}}</p>
+    </div>
+
+
+    <h5 class="subseccion">Datos Básicos</h5>
     <div class="contenedor-detalles">
       <div>
         <i class="fa-solid fa-ruler-combined"></i><span>Superficie Construída: {{elInmueble.superficieConstruida | metrosCuadrados}}</span>
@@ -48,12 +54,15 @@
         </div>
     </div>
 
-  <h5>Muebles y Acabados</h5>
-    <div>
-      <i class="fa-solid fa-couch"></i><span>Amueblado: {{elInmueble.amueblado | amueblado}}</span>
+    <h5 class="subseccion">Muebles y acabados</h5>
+    <div class="contenedor-muebles" >
+      <div>
+        <i class="fa-solid fa-couch"></i><span>Amueblado: {{elInmueble.amueblado | amueblado}}</span>
+      </div>
     </div>
 
-  <h5>Equipamiento e instalaciones</h5>
+    <h5 class="subseccion">Equipamento e instalaciones</h5>
+  <div class="contenedor-equipamento-instalaciones">
     <div>
       <i class="fa-solid fa-elevator"></i><span>Ascensor: {{elInmueble.ascensor | sino }}</span>
     </div>
@@ -63,7 +72,18 @@
     <div>
       <i class="fa-solid fa-car"></i><span>Plazas de Garaje: {{elInmueble.plazasGaraje}}</span>
     </div>
+    <div>
+      <i class="fa-solid fa-boxes-packing"></i> <span>Trastero: {{elInmueble.trastero | sino }}</span>
+    </div>
 
+    <div>
+        <i class="fa-solid fa-water-ladder"></i> <span>Piscina: {{elInmueble.piscina | sino }}</span>
+    </div>
+
+    <div>
+        <i class="fa-solid fa-leaf"></i> <span>Jardín {{elInmueble.jardin | sino }}</span>
+  </div>
+</div>
   </section>
 
 </div>

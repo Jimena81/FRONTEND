@@ -5,12 +5,31 @@
   padding:20px;
   background-color: var(--amarillo-corporativo);
   border-radius:10px;
-  margin-bottom:10px;
+  margin-bottom:25px;
+
 
 }
 
+.contenedor-boton{
+  display: flex;
+  justify-content: right;
+}
 
+form{
 
+  max-width: 25rem;
+
+}
+
+.titulo-busqueda{
+
+  background-color: var(--azul-corporativo);
+  padding:15px;
+  color:white;
+  border-radius: 5px;
+  text-align:center;
+  margin-top:25px;
+}
 
 
 
@@ -46,7 +65,11 @@
 @media only screen and (min-width:992px){
 
 
+  form{
 
+    max-width: 75rem;
+
+}
 
 }
 

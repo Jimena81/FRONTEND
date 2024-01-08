@@ -4,7 +4,7 @@
 
 .ficha{
   /* width: 100%; */
-  border:1px solid var(--gris-corporativo);
+  border:1px solid var(--azul-corporativo);
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 15px;
@@ -58,7 +58,7 @@
 }
 
 .footer-ficha{
-  background-color: var(--gris-corporativo-oscuro);
+  background-color: var(--azul-corporativo-oscuro);
   padding:3px 15px 3px 15px;
   border-radius: 5px;
   display: flex;

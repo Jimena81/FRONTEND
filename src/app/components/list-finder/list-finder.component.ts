@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CommunicationService } from '../../services/communication.service';
 import { InmuebleService } from '../../services/inmueble.service';
+import { PoblacionService } from '../../services/poblacion.service';
+import { TipoService } from '../../services/tipo.service';
 
 @Component({
   selector: 'app-list-finder',
@@ -12,43 +15,125 @@ export class ListFinderComponent implements OnInit{
   poblacion:number;
   tipo:number;
   operacion:string;
+  cartelNoInmuebles:boolean=false;
 
-  aDatos:any[] = [];
+  nombrePoblacion:string;
+  nombreTipo:string;
+
+    /////////////////////////////////////////////////
+    nFases:number=2;
+    cargaCompletada:boolean=false;
+    fasesCargadas:number=0;
+    /////////////////////////////////////////////////
+
+    aDatos:any[]=[];
 
   constructor(
-
+    private _communicationService:CommunicationService,
     private _route:ActivatedRoute,
     private _router:Router,
     private _inmuebleService:InmuebleService,
+    private _poblacionService:PoblacionService,
+    private _tipoService:TipoService
   ){}
 
+
   ngOnInit(): void {
+    this._communicationService.cambioPortada(false);
+    this._communicationService.cambioFooter(false);
     this.getDatos();
   }
 
+
   getDatos():void{
-  //necesitolas 3 variables de la ruta po, ti, op
+
+
+    //Necesito las tres variables de ruta po, ti, op
     this._route.params.subscribe({
+
       next:(params)=>{
-        this.poblacion=params['po']
-        this.tipo=params['ti']
-        this.operacion=params['op']
-      },
-      error:(error)=>{this._router.navigate(["/error"])},
+        this.poblacion=params['po'];
+        this.tipo=params['ti'];
+        this.operacion=params['op'];
 
-      });
-    this._inmuebleService.getInmueblesFinder(
-      this.tipo,
-      this.poblacion,
-      this.operacion
-    ).subscribe({
+      }
+      ,
+      error:(error)=>{this._router.navigate(["/error"])}
 
-      next:(datos)=>{this.aDatos=datos},
-      error:(error)=>{this._router.navigate(['/error'])},
-      complete:()=>{}
-    })
+    });//NO TIENE COMPLETE
+
+    //Hacemos esta llamada para conseguir el nombre de la población elegida
+    this._poblacionService.getPoblacion(this.poblacion).subscribe({
+
+      next: (datos)=>{
+        this.nombrePoblacion = datos.nombre;
+      }
+      ,
+      error: (error)=>{this._router.navigate(["/error"])}
+      ,
+      complete: ()=>{this.faseCarga()}
+
+
+    });
+
+    //Hacemos esta llamada para conseguir el nombre del tipo elegido
+    this._tipoService.getTipo(this.tipo).subscribe({
+
+      next: (datos)=>{
+
+        this.nombreTipo = datos.nombre;
+      }
+      ,
+      error: (error)=>{this._router.navigate(["/error"])}
+      ,
+      complete: ()=>{this.faseCarga()}
+
+
+    });
+
+
+
+    this._inmuebleService.getInmueblesFinder(this.tipo, this.poblacion, this.operacion).subscribe({
+
+      next: (datos)=>{
+
+        this.aDatos = datos;
+
+        if(this.aDatos.length == 0){
+
+          this.cartelNoInmuebles = true;
+
+        }
+
+
+
+      }
+      ,
+      error: (error)=>{this._router.navigate(["/error"])}
+      ,
+      complete: ()=>{this.faseCarga()}
+    });
+
+
+
+
+  }//end getDatos
+
+
+
+
+  ////////////////////////////////////////////////
+  faseCarga():void{
+
+    this.fasesCargadas++;
+    if(this.fasesCargadas == this.nFases){
+      this.cargaCompletada = true;
+    }
 
   }
+  ////////////////////////////////////////////////
+
+
 
 
 }

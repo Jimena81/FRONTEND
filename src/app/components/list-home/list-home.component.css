@@ -6,11 +6,16 @@
 
   display: flex;
   flex-direction: column;
-
+  margin-top: 20px;
 }
 
 .ficha{
   width: 100%;
+}
+h2{
+  font-size: 28px;
+  border-bottom: solid 3px var(--amarillo-corporativo);
+  margin:45px 0 5px 0;
 }
 
 
@@ -24,15 +29,16 @@
 
   .contenedor-fichas{
 
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-  }
+}
 
   .ficha{
       width: 49%;
   }
+
 
 
 

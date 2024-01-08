@@ -4,34 +4,140 @@
 
 .contenedor{
 
- padding: 15px;
+ padding:25px 15px;
  width:100%;
 
 }
+.icono{
+
+  height: 24px;
+  filter:invert(1);
+}
+
 .contenedor-iconos{
-  display:flex;
-  align-items:center;
-  gap: 12%;
-  margin-bottom: 10px;
-  font.size: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--azul-corporativo-oscuro);
+    padding:5px 15px;
+    border-radius: 10px;
+    gap:15px;
+    margin-bottom:25px
 }
-.iconos{
-  font-size:18px;
-  diplay:flex;
-  align-content:center;
+.contenedor-iconos div{
+
+  display: flex;
+  align-items: center;
 }
+
 .numero-elementos{
-  font-size:15px;
+
+  font-size: 1.5rem;
+  padding-right: 2px;
+  color: white;
 }
-h1{
-  font-size:3rem;
+////////////////////////////////////////////////
+.subseccion{
+  border-bottom: solid 3px var(--amarillo-corporativo);
+  margin-top: 20px;
+}
+
+.contenedor-detalles{
+
+  padding:15px;
+  border-radius: 10px;
+}
+
+.contenedor-detalles div{
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.contenedor-detalles div i{
+  background-color: var(--azul-corporativo-oscuro);
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  color:white;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+
+
+.contenedor-muebles{
+
+  padding:15px;
+  border-radius: 10px;
+}
+
+.contenedor-muebles div{
+
+  display: flex;
+  margin-bottom: 5px;
+
+}
+
+.contenedor-muebles div i{
+
+  background-color: var(--azul-corporativo-oscuro);
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  color:white;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-right: 5px;
+
+}
+
+.contenedor-equipamento-instalaciones{
+
+  padding:15px;
+  border-radius: 10px;
+}
+
+.contenedor-equipamento-instalaciones div{
+
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.contenedor-equipamento-instalaciones div i{
+
+  background-color: var(--azul-corporativo-oscuro);
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  color:white;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+
+
+.icono-check{
+
+  color: var(--gris-corporativo);
+  font-size: 1.5rem;
+}
+
+
+h3{
+  font-size: 1rem;
+  border-bottom: solid 3px var(--amarillo-corporativo);
+  margin-bottom:15px;
+}
+.precio{
+  font-size:1.5rem;
   text-align:right;
   margin-bottom:15px;
 }
-h3{
-  font-size: 2rem;
-}
-
 
 /* ================================================= */
 /* MEDIA QUERIES */
@@ -59,19 +165,59 @@ h3{
 
 /* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
 @media only screen and (min-width:992px){
+  .subseccion{
+    font-size: 35px;
+    margin-top: 20px;
+    border-bottom: solid 3px var(--amarillo-corporativo);
+  }
+  .icono{
 
-.contenedor img{
-  width:50%;
-  
+    height: 54px;
+    filter:invert(1);
+  }
+.contenedor-descripcion{
+  font-size: 25px;
+}
+.contenedor-detalles{
+  font-size: 25px;
+}
+.contenedor-detalles div i{
+  width: 45px;
+  height: 45px;
+}
+.contenedor-muebles{
+  font-size: 25px;
+
+}
+.contenedor-muebles div i{
+  width: 45px;
+  height: 45px;
+
+
 }
 
+.contenedor-equipamento-instalaciones{
+
+  font-size: 25px;
+}
+.contenedor-equipamento-instalaciones div i{
+  width: 45px;
+  height: 45px;
+}
 
 }
 
 /* MAYOR O IGUAL DE 1200PX (A PARTIR DE 1200PX INCLUSIVE) - PC GRANDES, TELEVISIONES */
 @media only screen and (min-width:1200px){
 
+  h3{
+    font-size: 2.5rem;
 
+  }
+  .precio{
+    font-size:2.5rem;
+
+  }
 
 
 }
