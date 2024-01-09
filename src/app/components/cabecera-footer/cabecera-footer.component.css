@@ -41,6 +41,11 @@
   font-size:2rem;
 
 }
+.contenedor-aplicaciones img{
+
+  width:100px;
+  height:35px;
+}
 .contenedor-aplicaciones span{
 
   display:none;
@@ -127,6 +132,12 @@
 /* MAYOR O IGUAL DE 768PX (A PARTIR DE 768PX INCLUSIVE) - SMARTPHONES GRANDES, TABLETS */
 @media only screen and (min-width:768px){
 
+  .contenedor-aplicaciones img{
+
+    width:80px;
+    height:35px;
+    gap:12px;
+  }
 
 
 
@@ -142,22 +153,22 @@
 
   }
 
+  .contenedor-aplicaciones{
 
+    gap:5px;
+  }
+  .contenedor-aplicaciones img{
 
+    width:250px;
+    height:35px;
+  }
 
 }
 
 /* MAYOR O IGUAL DE 1200PX (A PARTIR DE 1200PX INCLUSIVE) - PC GRANDES, TELEVISIONES */
 @media only screen and (min-width:1200px){
-  .contenedor-aplicaciones span{
-    display: inline-block;
-    font-size: 0.8rem;
-    padding-right:0.3rem;
-  }
+  
 
-  .contenedor-aplicaciones{
-    width:38%;
-  }
   .contenedor-iconos{
     width:20%;
   }

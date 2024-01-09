@@ -1,1 +1,35 @@
-<p>login works!</p>
+
+<!-- para que funcione este form hay que importar el ReactiveFormModules en appModule -->
+
+<div class="contenedor">
+    <h1>LogIn</h1>
+
+    <form  class="mx-auto" #form="ngForm" (ngSubmit)="login()" [formGroup]="loginForm">
+
+      <div class="mb-3">
+
+        <label for="email">EMAIL*</label>
+        <input id="email" type="email" name="email" required [class.is-invalid]="loginForm.get('elEmail')?.invalid && loginForm.get('elEmail')?.touched" class="form-control" formControlName="elEmail" autocomplete="off">
+
+      </div>
+
+        <label for="password">PASSWORD*</label>
+        <input id="password" type="password" name="password" required [class.is-invalid]="loginForm.get('elPassword')?.invalid && loginForm.get('elPassword')?.touched" class="form-control" formControlName="elPassword" autocomplete="off">
+      <div class="mb-3">
+
+
+      </div>
+
+      <div class="contenedor-boton">
+        <button type="submit"class="btn btn-md btn-primary" [disabled]="form.invalid">Login</button>
+
+
+      </div>
+
+
+
+    </form>
+
+
+
+</div>

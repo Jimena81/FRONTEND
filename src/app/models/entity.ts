@@ -56,6 +56,6 @@ export interface Inmueble{
 }
 export interface Credentials{
 
-  userName:string;
+  username:string;
   password:string;
 }
