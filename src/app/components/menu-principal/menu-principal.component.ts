@@ -26,10 +26,6 @@ constructor(
 
 ){}
 
-
-
-
-
   ngOnInit(): void {
     this.suscripcion = this._communicationService.logueo$.subscribe({
         next:(info)=>{

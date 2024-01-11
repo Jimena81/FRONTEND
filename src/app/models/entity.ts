@@ -59,3 +59,13 @@ export interface Credentials{
   username:string;
   password:string;
 }
+export interface Usuario{
+
+  id?:number;
+  user:string;
+  email:string;
+  password:string;
+  rol?:string;
+  activo?:number;
+
+}

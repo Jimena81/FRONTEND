@@ -12,8 +12,8 @@
 
 <footer class="footer-ficha">
   <div class="contenedor-botones-admin">
-    <button class="btn btn-success btn-sm" [routerLink]="['/edit-inmueble',datos.id]"><i class="fa-solid fa-pen-to-square"></i></button>
-    <button class="btn btn-info btn-sm" [routerLink]="['/add-imagen',datos.id]">+<i class="fa-solid fa-camera"></i></button>
+    <button *ngIf="isLogged && rol=='admin'" class="btn btn-success btn-sm" [routerLink]="['/edit-inmueble',datos.id]"><i class="fa-solid fa-pen-to-square"></i></button>
+    <button *ngIf="isLogged && rol=='admin'" class="btn btn-info btn-sm" [routerLink]="['/add-imagen',datos.id]">+<i class="fa-solid fa-camera"></i></button>
     <button class="btn btn-info btn-sm" [routerLink]="['/detail-inmueble',datos.id]"><i class="fa-solid fa-magnifying-glass"></i></button>
 
   </div>

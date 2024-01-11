@@ -100,10 +100,10 @@ export class AuthService {
     const helper = new JwtHelperService();
     const decodedToken = helper.decodeToken(this.token);
     let rol = decodedToken.ROLES.substring();
-
-    if(rol=="ROLE_USER"){
+    console.log(rol);
+    if(rol=="[ROLE_USER]"){
       rol = "user";
-    }else if(rol == "ROLE_ADMIN"){
+    }else if(rol == "[ROLE_ADMIN]"){
       rol = "admin";
     }
 

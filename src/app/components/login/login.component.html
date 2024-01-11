@@ -4,6 +4,11 @@
 <div class="contenedor">
     <h1>LogIn</h1>
 
+    <div class="registrate">
+      <h6>¿Aún no eres miembro de nuestra comunidad?. Registraté.</h6>
+      <button type="button" class="btn btn-md btn-primary" routerLink="add-usuario">Registrate</button>
+    </div>
+
     <form  class="mx-auto" #form="ngForm" (ngSubmit)="login()" [formGroup]="loginForm">
 
       <div class="mb-3">

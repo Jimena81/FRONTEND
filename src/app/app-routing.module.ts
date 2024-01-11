@@ -19,6 +19,7 @@ import { DetailInmuebleComponent } from './components/detail-inmueble/detail-inm
 import { ListFinderComponent } from './components/list-finder/list-finder.component';
 import { adminGuard } from './guards/admin.guard';
 import { LoginComponent } from './components/login/login.component';
+import { AddUsuarioComponent } from './components/add-usuario/add-usuario.component';
 
 
 const routes: Routes = [
@@ -35,6 +36,7 @@ const routes: Routes = [
 {path:"add-poblacion",component:AddPoblacionComponent, canActivate:[adminGuard]},
 {path:"add-inmueble",component:AddInmuebleComponent, canActivate:[adminGuard]},
 {path:"add-imagen/:id",component:AddImagenComponent, canActivate:[adminGuard]},
+{path:"add-usuario",component:AddUsuarioComponent},
 {path:"edit-tipo/:id",component:EditTipoComponent, canActivate:[adminGuard]},
 {path:"edit-provincia/:id",component:EditProvinciaComponent, canActivate:[adminGuard]},
 {path:"edit-poblacion/:id",component:EditPoblacionComponent, canActivate:[adminGuard]},

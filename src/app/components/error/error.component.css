@@ -18,7 +18,9 @@ img{
 /* MAYOR O IGUAL DE 576PX (A PARTIR DE 575PX INCLUSIVE) - SMARTPHONES */
 @media only screen and (min-width:576px){
 
-
+  img{
+    height: 350px;
+  }
 
 
 
@@ -37,7 +39,9 @@ img{
 
 /* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
 @media only screen and (min-width:992px){
-
+  img{
+    height: 350px;
+  }
 
 
 

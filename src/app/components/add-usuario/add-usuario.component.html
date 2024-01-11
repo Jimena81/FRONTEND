@@ -1,0 +1,30 @@
+<div class="contenedor">
+
+  <h1>Registrate</h1>
+  <form class="mx-auto" #form="ngForm" (ngSubmit)="add()">
+
+      <div class="mb-3">
+        <label for="usuario">NOMBRE*</label>
+        <input id="usuario" type="text" name="usuario" required class="form-control" autocomplete="off" style="text-transform: uppercase" [(ngModel)]="usuario.nombre">
+      </div>
+
+      <div class="mb-3">
+
+        <label for="email">E-MAIL*</label>
+        <select name="email" type="email" id="email" class="form-select" required [(ngModel)]="usuario.email">
+
+
+        </select>
+        <div class="mb-3">
+
+          <label for="password">PASSWORD*</label>
+          <select name="password" type="password" id="password" class="form-select" required [(ngModel)]="usuario.password">
+
+
+          </select>
+
+      </div>
+  <div class="contenedor-boton">
+      <button type="submit" class="btn btn-md btn-primary" [disabled]="form.invalid">+Añadir</button>
+    </div>
+

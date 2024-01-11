@@ -42,6 +42,7 @@ import { SinoPipe } from './pipes/sino.pipe';
 import { ListFinderComponent } from './components/list-finder/list-finder.component';
 import { FinderComponent } from './components/finder/finder.component';
 import { LoginComponent } from './components/login/login.component';
+import { AddUsuarioComponent } from './components/add-usuario/add-usuario.component';
 
 
 
@@ -84,6 +85,7 @@ import { LoginComponent } from './components/login/login.component';
     ListFinderComponent,
     FinderComponent,
     LoginComponent,
+    AddUsuarioComponent,
 
 
   ],
