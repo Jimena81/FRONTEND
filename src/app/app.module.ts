@@ -43,6 +43,9 @@ import { ListFinderComponent } from './components/list-finder/list-finder.compon
 import { FinderComponent } from './components/finder/finder.component';
 import { LoginComponent } from './components/login/login.component';
 import { AddUsuarioComponent } from './components/add-usuario/add-usuario.component';
+import { ListUsuarioComponent } from './components/list-usuario/list-usuario.component';
+import { EditUsuarioComponent } from './components/edit-usuario/edit-usuario.component';
+
 
 
 
@@ -86,6 +89,8 @@ import { AddUsuarioComponent } from './components/add-usuario/add-usuario.compon
     FinderComponent,
     LoginComponent,
     AddUsuarioComponent,
+    ListUsuarioComponent,
+    EditUsuarioComponent,
 
 
   ],

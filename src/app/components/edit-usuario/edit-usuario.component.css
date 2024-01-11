@@ -2,14 +2,11 @@
 /* FIRST MOBILE */
 /* ================================================= */
 .contenedor{
-
-  padding-bottom:20px;
-
-
+  padding:15px;
 }
 
 .contenedor-boton{
-  display:flex;
+  display: flex;
   justify-content: right;
 }
 
@@ -18,8 +15,19 @@ form{
   max-width: 25rem;
 }
 
+.label-check{
+  margin-right: 10px;
+}
 
+.id-tipo{
 
+  font-weight: bold;
+  background-color: var(--gris-corporativo);
+  border-radius: 5px;
+  padding:8px;
+  color:white;
+  margin: 0 0 5px 0;
+}
 
 
 /* ================================================= */
@@ -48,7 +56,6 @@ form{
 
 /* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
 @media only screen and (min-width:992px){
-
 
 
 

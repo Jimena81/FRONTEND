@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
 import { GLOBAL } from './global';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Usuario } from '../models/entity';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UsuarioServiceService {
+export class UsuarioService {
   url:string= GLOBAL.url;
 
 

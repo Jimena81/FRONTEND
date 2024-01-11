@@ -1,26 +1,10 @@
 /* ================================================= */
 /* FIRST MOBILE */
 /* ================================================= */
+
 .contenedor{
-
-  padding-bottom:20px;
-
-
+  padding:15px;
 }
-
-.contenedor-boton{
-  display:flex;
-  justify-content: right;
-}
-
-form{
-
-  max-width: 25rem;
-}
-
-
-
-
 
 /* ================================================= */
 /* MEDIA QUERIES */
@@ -48,7 +32,6 @@ form{
 
 /* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
 @media only screen and (min-width:992px){
-
 
 
 

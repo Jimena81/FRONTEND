@@ -20,6 +20,8 @@ import { ListFinderComponent } from './components/list-finder/list-finder.compon
 import { adminGuard } from './guards/admin.guard';
 import { LoginComponent } from './components/login/login.component';
 import { AddUsuarioComponent } from './components/add-usuario/add-usuario.component';
+import { EditUsuarioComponent } from './components/edit-usuario/edit-usuario.component';
+import { ListUsuarioComponent } from './components/list-usuario/list-usuario.component';
 
 
 const routes: Routes = [
@@ -30,6 +32,7 @@ const routes: Routes = [
 {path:"list-provincia",component:ListProvinciaComponent, canActivate:[adminGuard]},
 {path:"list-poblacion",component:ListPoblacionComponent, canActivate:[adminGuard]},
 {path:"list-inmueble",component:ListInmuebleComponent, canActivate:[adminGuard]},
+{path:"list-usuario",component:ListUsuarioComponent, canActivate:[adminGuard]},
 {path:"list-finder/:ti/:po/:op",component:ListFinderComponent},
 {path:"add-tipo",component:AddTipoComponent, canActivate:[adminGuard]},
 {path:"add-provincia",component:AddProvinciaComponent, canActivate:[adminGuard]},
@@ -41,6 +44,7 @@ const routes: Routes = [
 {path:"edit-provincia/:id",component:EditProvinciaComponent, canActivate:[adminGuard]},
 {path:"edit-poblacion/:id",component:EditPoblacionComponent, canActivate:[adminGuard]},
 {path:"edit-inmueble/:id",component:EditInmuebleComponent, canActivate:[adminGuard]},
+{path:"edit-usuario/:id",component:EditUsuarioComponent, canActivate:[adminGuard]},
 {path:"detail-inmueble/:id",component:DetailInmuebleComponent},
 {path:"login",component:LoginComponent},
 

@@ -1,30 +1,42 @@
 <div class="contenedor">
 
-  <h1>Registrate</h1>
-  <form class="mx-auto" #form="ngForm" (ngSubmit)="add()">
-
-      <div class="mb-3">
-        <label for="usuario">NOMBRE*</label>
-        <input id="usuario" type="text" name="usuario" required class="form-control" autocomplete="off" style="text-transform: uppercase" [(ngModel)]="usuario.nombre">
-      </div>
-
-      <div class="mb-3">
-
-        <label for="email">E-MAIL*</label>
-        <select name="email" type="email" id="email" class="form-select" required [(ngModel)]="usuario.email">
+  <h1>Registro usuario</h1>
 
 
-        </select>
-        <div class="mb-3">
-
-          <label for="password">PASSWORD*</label>
-          <select name="password" type="password" id="password" class="form-select" required [(ngModel)]="usuario.password">
+      <form  class="mx-auto" #form="ngForm" (ngSubmit)="register()" [formGroup]="registerForm">
 
 
-          </select>
+          <div class="mb-3">
 
-      </div>
-  <div class="contenedor-boton">
-      <button type="submit" class="btn btn-md btn-primary" [disabled]="form.invalid">+Añadir</button>
-    </div>
+              <label for="email">EMAIL*</label>
+              <input id="email" type="email" name="email" [class.is-invalid]="registerForm.get('elEmail')?.invalid && registerForm.get('elEmail')?.touched" class="form-control" formControlName="elEmail" autocomplete="off">
+          </div>
 
+
+          <div class="mb-3">
+
+              <label for="password">PASSWORD*</label>
+              <input id="password" type="password" name="password"  [class.is-invalid]="registerForm.get('elPassword')?.invalid && registerForm.get('elPassword')?.touched" class="form-control" formControlName="elPassword" autocomplete="off">
+
+          </div>
+
+
+          <div class="mb-3">
+
+              <label for="usuario">USUARIO*</label>
+              <input id="usuario" type="text" name="user" [class.is-invalid]="registerForm.get('elUsuario')?.invalid && registerForm.get('elUsuario')?.touched" class="form-control" formControlName="elUsuario" autocomplete="off">
+
+          </div>
+
+
+          <div class="contenedor-boton">
+
+              <button type="submit"class="btn btn-md btn-primary" [disabled]="form.invalid">Regístrate!!!</button>
+
+          </div>
+
+
+      </form>
+
+
+</div>
